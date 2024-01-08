@@ -1471,7 +1471,7 @@
         "@name":"default",
         "mAdminState":"disabled",
         "MaxRecords":1000,
-        "Expiration":36000,
+        "Expiration":36001,
         "GatewayPeering":"default-gateway-peering"
       }
     },
