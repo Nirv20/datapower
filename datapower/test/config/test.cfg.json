@@ -1492,9 +1492,9 @@
     {
       "Probe":{
         "@name":"default",
-        "mAdminState":"disabled",
+        "mAdminState":"enabled",
         "MaxRecords":1000,
-        "Expiration":18001,
+        "Expiration":18002,
         "GatewayPeering":"default-gateway-peering"
       }
     },
