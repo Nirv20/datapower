@@ -1,6 +1,6 @@
 {
   "@build":"359782",
-  "@timestamp":"Mon Jan  8 09:31:47 2024",
+  "@timestamp":"Mon Jan  8 11:14:04 2024",
   "configuration":[
     {
       "DomainSettings":{
@@ -17,10 +17,25 @@
       }
     },
     {
+      "PasswordAlias":{
+        "@name":"git_token",
+        "mAdminState":"enabled"
+      }
+    },
+    {
       "CryptoCertificate":{
         "@name":"172.30.1.112",
         "mAdminState":"enabled",
         "Filename":"cert:///172.30.1.112-sscert.pem",
+        "PasswordAlias":"off",
+        "IgnoreExpiration":"off"
+      }
+    },
+    {
+      "CryptoCertificate":{
+        "@name":"172.30.1.121",
+        "mAdminState":"enabled",
+        "Filename":"cert:///172.30.1.121-sscert.pem",
         "PasswordAlias":"off",
         "IgnoreExpiration":"off"
       }
@@ -39,6 +54,14 @@
         "@name":"172.30.1.112",
         "mAdminState":"enabled",
         "Filename":"cert:///172.30.1.112-privkey.pem",
+        "PasswordAlias":"off"
+      }
+    },
+    {
+      "CryptoKey":{
+        "@name":"172.30.1.121",
+        "mAdminState":"enabled",
+        "Filename":"cert:///172.30.1.121-privkey.pem",
         "PasswordAlias":"off"
       }
     },
@@ -206,10 +229,10 @@
         "@name":"JSON",
         "mAdminState":"enabled",
         "JSONMaxNestingDepth":64,
-        "JSONMaxLabelLength":256,
-        "JSONMaxValueLength":8192,
+        "JSONMaxLabelLength":2560,
+        "JSONMaxValueLength":81920,
         "JSONMaxNumberLength":128,
-        "JSONDocumentSize":4194304
+        "JSONDocumentSize":41943040
       }
     },
     {
@@ -1471,7 +1494,7 @@
         "@name":"default",
         "mAdminState":"enabled",
         "MaxRecords":1000,
-        "Expiration":18000,
+        "Expiration":18002,
         "GatewayPeering":"default-gateway-peering"
       }
     },
