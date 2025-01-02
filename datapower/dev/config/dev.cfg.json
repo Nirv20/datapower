@@ -1033,7 +1033,7 @@
     },
     {
       "HTTPService":{
-        "@name":"Serwer_HTTP",
+        "@name":"Serwer_HTTP_DEV",
         "mAdminState":"enabled",
         "LocalAddress":"0.0.0.0",
         "Priority":"normal",
