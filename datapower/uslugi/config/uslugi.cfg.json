@@ -1,6 +1,6 @@
 {
   "@build":"370456",
-  "@timestamp":"Thu Jan  2 14:49:44 2025",
+  "@timestamp":"Fri Jan  3 07:22:23 2025",
   "configuration":[
     {
       "DomainSettings":{
@@ -1026,6 +1026,17 @@
         "mAdminState":"enabled",
         "Type":"reject",
         "LogLevel":"debug"
+      }
+    },
+    {
+      "HTTPService":{
+        "@name":"Serwer_HTTP",
+        "mAdminState":"enabled",
+        "LocalAddress":"0.0.0.0",
+        "Priority":"normal",
+        "LocalPort":8081,
+        "Mode":"normal",
+        "BaseDir":"store:///"
       }
     },
     {
