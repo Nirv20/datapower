@@ -1047,7 +1047,7 @@
         "Priority":"normal",
         "LocalPort":8080,
         "Mode":"normal",
-        "BaseDir":"store:///"
+        "BaseDir":"{{ change_HTTPService_Serwer_HTTP.*_BaseDir }}"
       }
     },
     {
