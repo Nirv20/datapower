@@ -1,6 +1,6 @@
 {
   "@build":"370456",
-  "@timestamp":"Fri Jan  3 08:14:06 2025",
+  "@timestamp":"Fri Jan  3 08:17:04 2025",
   "configuration":[
     {
       "GitOpsTemplate":{
@@ -11,7 +11,7 @@
             "TemplateType":"change",
             "ClassName":"HTTPService",
             "Name":"Serwer_HTTP_DEV",
-            "Field":"LocalAddress",
+            "Field":"LocalPort",
             "Value":"8090",
             "ValueInverse":null,
             "ValueValidate":null
