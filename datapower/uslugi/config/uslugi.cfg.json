@@ -1,7 +1,6 @@
 {
   "@build":"370456",
-
-  "@timestamp":"Thu Jan  2 14:30:18 2025",
+  "@timestamp":"Thu Jan  2 14:49:44 2025",
   "configuration":[
     {
       "DomainSettings":{
@@ -16,15 +15,15 @@
         "@name":"github",
         "mAdminState":"enabled",
         "Version":1,
-        "EncryptedPassword":"6We4LUWj3YL1K/7GKw42UXU0TpF/shSBPANlXsQmKHnfgxqObHMdezNpN0hW13NQk7PAqXxVrnSqRetpSxiEBQ=="
+        "EncryptedPassword":"NNvtA6yjKZrL8WJvJkhBc2CICHXOfgYPbxCMa7ryEL60+thfaFrDb1pj+m8O0kDuGIBqUmQwu636DH4jSyYTHw=="
       }
     },
     {
       "PasswordAlias":{
         "@name":"haslo_github",
         "mAdminState":"enabled",
-        "Version":0,
-        "EncryptedPassword":"RLtSP5whrygc5fJEQaxDUCU1VL8nqnU+aENABceLiWM="
+        "Version":1,
+        "EncryptedPassword":"4gmCJBI/HKeQEnYhye0N6Ri/nEI+tU+28W43KHip9xM="
       }
     },
     {
@@ -57,9 +56,6 @@
       "CryptoValCred":{
         "@name":"github",
         "mAdminState":"enabled",
-        "Certificate":[
-          "github"
-        ],
         "CertValidationMode":"legacy",
         "UseCRL":"on",
         "RequireCRL":"off",
@@ -1030,18 +1026,6 @@
         "mAdminState":"enabled",
         "Type":"reject",
         "LogLevel":"debug"
-      }
-    },
-    {
-      "HTTPService":{
-
-        "@name":"Serwer_HTTP_DEV",
-        "mAdminState":"enabled",
-        "LocalAddress":"0.0.0.0",
-        "Priority":"normal",
-        "LocalPort":8080,
-        "Mode":"normal",
-        "BaseDir":"store:///"
       }
     },
     {
