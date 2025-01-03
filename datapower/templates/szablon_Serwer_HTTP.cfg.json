@@ -1,6 +1,6 @@
 {
   "@build":"370456",
-  "@timestamp":"Fri Jan  3 08:41:22 2025",
+  "@timestamp":"Fri Jan  3 08:51:21 2025",
   "configuration":[
     {
       "GitOpsTemplate":{
@@ -13,6 +13,15 @@
             "Name":"Serwer_HTTP.*",
             "Field":"LocalPort",
             "Value":"8090",
+            "ValueInverse":null,
+            "ValueValidate":null
+          },
+          {
+            "TemplateType":"change",
+            "ClassName":"HTTPSourceProtocolHandler",
+            "Name":"Handler.*",
+            "Field":"AllowedFeatures.GET",
+            "Value":"on",
             "ValueInverse":null,
             "ValueValidate":null
           }
