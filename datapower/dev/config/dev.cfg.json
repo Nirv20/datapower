@@ -1,6 +1,6 @@
 {
   "@build":"370456",
-  "@timestamp":"Fri Jan  3 08:11:19 2025",
+  "@timestamp":"Fri Jan  3 08:54:36 2025",
   "configuration":[
     {
       "DomainSettings":{
@@ -688,6 +688,102 @@
       }
     },
     {
+      "HTTPSourceProtocolHandler":{
+        "@name":"Handler_HTTP1",
+        "mAdminState":"enabled",
+        "LocalAddress":"0.0.0.0",
+        "LocalPort":9000,
+        "HTTPVersion":"HTTP/1.1",
+        "AllowedFeatures":{
+          "HTTP-1.0":"on",
+          "HTTP-1.1":"on",
+          "HTTP-2.0":"off",
+          "POST":"on",
+          "GET":"{{ change_HTTPSourceProtocolHandler_Handler.*_AllowedFeatures.GET }}",
+          "PUT":"off",
+          "PATCH":"off",
+          "HEAD":"off",
+          "OPTIONS":"off",
+          "TRACE":"off",
+          "DELETE":"off",
+          "CONNECT":"off",
+          "CustomMethods":"off",
+          "QueryString":"on",
+          "FragmentIdentifiers":"on",
+          "DotDot":"off",
+          "DotDotInPath":"off",
+          "DotDotInQueryString":"off",
+          "CmdExe":"off"
+        },
+        "PersistentConnections":"on",
+        "MaxPersistentConnectionsReuse":0,
+        "AllowCompression":"off",
+        "AllowWebSocketUpgrade":"off",
+        "WebSocketIdleTimeout":0,
+        "MaxURLLen":16384,
+        "MaxTotalHdrLen":128000,
+        "MaxHdrCount":0,
+        "MaxNameHdrLen":0,
+        "MaxValueHdrLen":0,
+        "MaxQueryStringLen":0,
+        "CredentialCharset":"protocol",
+        "HTTP2MaxStreams":100,
+        "HTTP2MaxFrameSize":16384,
+        "HTTP2StreamHeader":"off",
+        "ChunkedEncoding":"on",
+        "HeaderTimeout":30000,
+        "HTTP2IdleTimeout":0
+      }
+    },
+    {
+      "HTTPSourceProtocolHandler":{
+        "@name":"Handler_HTTP2",
+        "mAdminState":"enabled",
+        "LocalAddress":"0.0.0.0",
+        "LocalPort":9001,
+        "HTTPVersion":"HTTP/1.1",
+        "AllowedFeatures":{
+          "HTTP-1.0":"on",
+          "HTTP-1.1":"on",
+          "HTTP-2.0":"off",
+          "POST":"off",
+          "GET":"{{ change_HTTPSourceProtocolHandler_Handler.*_AllowedFeatures.GET }}",
+          "PUT":"on",
+          "PATCH":"on",
+          "HEAD":"off",
+          "OPTIONS":"off",
+          "TRACE":"off",
+          "DELETE":"off",
+          "CONNECT":"off",
+          "CustomMethods":"off",
+          "QueryString":"on",
+          "FragmentIdentifiers":"on",
+          "DotDot":"off",
+          "DotDotInPath":"off",
+          "DotDotInQueryString":"off",
+          "CmdExe":"off"
+        },
+        "PersistentConnections":"on",
+        "MaxPersistentConnectionsReuse":0,
+        "AllowCompression":"off",
+        "AllowWebSocketUpgrade":"off",
+        "WebSocketIdleTimeout":0,
+        "MaxURLLen":16384,
+        "MaxTotalHdrLen":128000,
+        "MaxHdrCount":0,
+        "MaxNameHdrLen":0,
+        "MaxValueHdrLen":0,
+        "MaxQueryStringLen":0,
+        "CredentialCharset":"protocol",
+        "HTTP2MaxStreams":100,
+        "HTTP2MaxFrameSize":16384,
+        "HTTP2StreamHeader":"off",
+        "ChunkedEncoding":"on",
+        "HeaderTimeout":30000,
+        "HTTP2IdleTimeout":0
+      }
+    },
+    {
       "WSStylePolicy":{
         "@name":"default",
         "mAdminState":"enabled",
@@ -1045,7 +1141,7 @@
         "mAdminState":"enabled",
         "LocalAddress":"0.0.0.0",
         "Priority":"normal",
-        "LocalPort":8080,
+        "LocalPort":"{{ change_HTTPService_Serwer_HTTP.*_LocalPort }}",
         "Mode":"normal",
         "BaseDir":"store:///"
       }
