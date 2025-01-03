@@ -1,6 +1,5 @@
 {
   "@build":"370456",
-
   "@timestamp":"Thu Jan  2 14:30:18 2025",
   "configuration":[
     {
@@ -1034,7 +1033,6 @@
     },
     {
       "HTTPService":{
-
         "@name":"Serwer_HTTP_DEV",
         "mAdminState":"enabled",
         "LocalAddress":"0.0.0.0",
