@@ -1,7 +1,6 @@
 {
   "@build":"370456",
-
-  "@timestamp":"Thu Jan  2 14:30:18 2025",
+  "@timestamp":"Fri Jan  3 08:11:19 2025",
   "configuration":[
     {
       "DomainSettings":{
@@ -15,8 +14,16 @@
       "PasswordAlias":{
         "@name":"github",
         "mAdminState":"enabled",
-        "Version":1,
+        "Version":0,
         "EncryptedPassword":"6We4LUWj3YL1K/7GKw42UXU0TpF/shSBPANlXsQmKHnfgxqObHMdezNpN0hW13NQk7PAqXxVrnSqRetpSxiEBQ=="
+      }
+    },
+    {
+      "PasswordAlias":{
+        "@name":"github_pass",
+        "mAdminState":"enabled",
+        "Version":1,
+        "EncryptedPassword":"WznqJ2pA5uNJoiSSrJlEVDRf5EgyjCBZSbuYLEAgu3A4H27tWuQwMzvvdc90IiKhsknBPNxX5t/71AgUbfbkjQ=="
       }
     },
     {
@@ -867,7 +874,7 @@
           "ProxyPolicyEnable":"off",
           "RemoteAddress":"",
           "RemotePort":0,
-          "UserName":null,
+          "UserName":"",
           "Password":null
         }
       }
@@ -1034,7 +1041,6 @@
     },
     {
       "HTTPService":{
-
         "@name":"Serwer_HTTP_DEV",
         "mAdminState":"enabled",
         "LocalAddress":"0.0.0.0",
