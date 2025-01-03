@@ -863,7 +863,7 @@
           "ProxyPolicyEnable":"off",
           "RemoteAddress":"",
           "RemotePort":0,
-          "UserName":"",
+          "UserName":null,
           "Password":null
         }
       }

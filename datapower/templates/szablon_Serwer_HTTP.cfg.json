@@ -1,0 +1,23 @@
+{
+  "@build":"370456",
+  "@timestamp":"Fri Jan  3 07:44:15 2025",
+  "configuration":[
+    {
+      "GitOpsTemplate":{
+        "@name":"szablon_Serwer_HTTP",
+        "mAdminState":"enabled",
+        "Templates":[
+          {
+            "TemplateType":"change",
+            "ClassName":"HTTPService",
+            "Name":"Serwer_HTTP_DEV",
+            "Field":"LocalAddress",
+            "Value":"8080",
+            "ValueInverse":null,
+            "ValueValidate":null
+          }
+        ]
+      }
+    }
+  ]
+}
