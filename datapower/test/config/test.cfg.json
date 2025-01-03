@@ -1,82 +1,84 @@
 {
-  "@build":"370456",
-
-  "@timestamp":"Thu Jan  2 14:30:18 2025",
+  "@build":"359782",
+  "@timestamp":"Fri Jan 12 11:32:13 2024",
   "configuration":[
     {
       "DomainSettings":{
         "@name":"default",
         "mAdminState":"enabled",
-        "PasswordTreatment":"masked",
+        "PasswordTreatment":"none",
         "ConfigDir":"config:///"
       }
     },
     {
       "PasswordAlias":{
-        "@name":"github",
-        "mAdminState":"enabled",
-        "Version":1,
-        "EncryptedPassword":"6We4LUWj3YL1K/7GKw42UXU0TpF/shSBPANlXsQmKHnfgxqObHMdezNpN0hW13NQk7PAqXxVrnSqRetpSxiEBQ=="
+        "@name":"git_pass",
+        "mAdminState":"enabled"
       }
     },
     {
       "PasswordAlias":{
-        "@name":"haslo_github",
-        "mAdminState":"enabled",
-        "Version":0,
-        "EncryptedPassword":"RLtSP5whrygc5fJEQaxDUCU1VL8nqnU+aENABceLiWM="
+        "@name":"git_token",
+        "mAdminState":"enabled"
       }
     },
     {
       "CryptoCertificate":{
-        "@name":"github",
+        "@name":"172.30.1.112",
         "mAdminState":"enabled",
-        "Filename":"cert:///github.com",
+        "Filename":"cert:///172.30.1.112-sscert.pem",
         "PasswordAlias":"off",
         "IgnoreExpiration":"off"
       }
     },
     {
       "CryptoCertificate":{
-        "@name":"localhost",
+        "@name":"172.30.1.121",
         "mAdminState":"enabled",
-        "Filename":"cert:///localhost-sscert.pem",
+        "Filename":"cert:///172.30.1.121-sscert.pem",
+        "PasswordAlias":"off",
+        "IgnoreExpiration":"off"
+      }
+    },
+    {
+      "CryptoCertificate":{
+        "@name":"github.com",
+        "mAdminState":"enabled",
+        "Filename":"cert:///github.com.pem",
         "PasswordAlias":"off",
         "IgnoreExpiration":"off"
       }
     },
     {
       "CryptoKey":{
-        "@name":"localhost",
+        "@name":"172.30.1.112",
         "mAdminState":"enabled",
-        "Filename":"cert:///localhost-privkey.pem",
+        "Filename":"cert:///172.30.1.112-privkey.pem",
+        "PasswordAlias":"off"
+      }
+    },
+    {
+      "CryptoKey":{
+        "@name":"172.30.1.121",
+        "mAdminState":"enabled",
+        "Filename":"cert:///172.30.1.121-privkey.pem",
+        "PasswordAlias":"off"
+      }
+    },
+    {
+      "CryptoKey":{
+        "@name":"git_priv_key",
+        "mAdminState":"enabled",
+        "Filename":"cert:///nirv_private.key",
         "PasswordAlias":"off"
       }
     },
     {
       "CryptoValCred":{
-        "@name":"github",
+        "@name":"git_val",
         "mAdminState":"enabled",
         "Certificate":[
-          "github"
-        ],
-        "CertValidationMode":"legacy",
-        "UseCRL":"on",
-        "RequireCRL":"off",
-        "CRLDPHandling":"ignore",
-        "InitialPolicySet":[
-          "2.5.29.32.0"
-        ],
-        "ExplicitPolicy":"off",
-        "CheckDates":"on"
-      }
-    },
-    {
-      "CryptoValCred":{
-        "@name":"localhost",
-        "mAdminState":"enabled",
-        "Certificate":[
-          "localhost"
+          "github.com"
         ],
         "CertValidationMode":"legacy",
         "UseCRL":"off",
@@ -87,6 +89,96 @@
         ],
         "ExplicitPolicy":"off",
         "CheckDates":"off"
+      }
+    },
+    {
+      "SSHClientProfile":{
+        "@name":"git_SSH",
+        "mAdminState":"enabled",
+        "UserName":"git",
+        "ProfileUsage":"sftp",
+        "SSHUserAuthentication":{
+          "publickey":"off",
+          "password":"on"
+        },
+        "UserPrivateKey":"git_priv_key",
+        "PasswordAlias":"git_pass",
+        "PersistentConnections":"on",
+        "PersistentConnectionTimeout":120,
+        "StrictHostKeyChecking":"off",
+        "Ciphers":[
+          "CHACHA20-POLY1305_AT_OPENSSH.COM",
+          "AES128-CTR",
+          "AES192-CTR",
+          "AES256-CTR",
+          "AES128-GCM_AT_OPENSSH.COM",
+          "AES256-GCM_AT_OPENSSH.COM"
+        ],
+        "KEXAlg":[
+          "CURVE25519-SHA256_AT_LIBSSH.ORG",
+          "ECDH-SHA2-NISTP256",
+          "ECDH-SHA2-NISTP384",
+          "ECDH-SHA2-NISTP521",
+          "DIFFIE-HELLMAN-GROUP-EXCHANGE-SHA256"
+        ],
+        "MACAlg":[
+          "UMAC-64-ETM_AT_OPENSSH.COM",
+          "UMAC-128-ETM_AT_OPENSSH.COM",
+          "HMAC-SHA2-256-ETM_AT_OPENSSH.COM",
+          "HMAC-SHA2-512-ETM_AT_OPENSSH.COM",
+          "HMAC-SHA1-ETM_AT_OPENSSH.COM",
+          "UMAC-64_AT_OPENSSH.COM",
+          "UMAC-128_AT_OPENSSH.COM",
+          "HMAC-SHA2-256",
+          "HMAC-SHA2-512",
+          "HMAC-SHA1"
+        ],
+        "LegacyKex":"no"
+      }
+    },
+    {
+      "SSHClientProfile":{
+        "@name":"gitops_SSH",
+        "mAdminState":"enabled",
+        "UserName":"Nirv20",
+        "ProfileUsage":"sftp",
+        "SSHUserAuthentication":{
+          "publickey":"on",
+          "password":"off"
+        },
+        "UserPrivateKey":"git_priv_key",
+        "PasswordAlias":"git_pass",
+        "PersistentConnections":"on",
+        "PersistentConnectionTimeout":120,
+        "StrictHostKeyChecking":"off",
+        "Ciphers":[
+          "CHACHA20-POLY1305_AT_OPENSSH.COM",
+          "AES128-CTR",
+          "AES192-CTR",
+          "AES256-CTR",
+          "AES128-GCM_AT_OPENSSH.COM",
+          "AES256-GCM_AT_OPENSSH.COM"
+        ],
+        "KEXAlg":[
+          "CURVE25519-SHA256_AT_LIBSSH.ORG",
+          "ECDH-SHA2-NISTP256",
+          "ECDH-SHA2-NISTP384",
+          "ECDH-SHA2-NISTP521",
+          "DIFFIE-HELLMAN-GROUP-EXCHANGE-SHA256"
+        ],
+        "MACAlg":[
+          "UMAC-64-ETM_AT_OPENSSH.COM",
+          "UMAC-128-ETM_AT_OPENSSH.COM",
+          "HMAC-SHA2-256-ETM_AT_OPENSSH.COM",
+          "HMAC-SHA2-512-ETM_AT_OPENSSH.COM",
+          "HMAC-SHA1-ETM_AT_OPENSSH.COM",
+          "UMAC-64_AT_OPENSSH.COM",
+          "UMAC-128_AT_OPENSSH.COM",
+          "HMAC-SHA2-256",
+          "HMAC-SHA2-512",
+          "HMAC-SHA1"
+        ],
+        "LegacyKex":"no"
       }
     },
     {
@@ -122,14 +214,25 @@
         "EventBufferSize":"2048",
         "LogEvents":[
           {
-            "Class":"all",
-            "Priority":"error"
-          },
-          {
             "Class":"mgmt",
             "Priority":"notice"
+          },
+          {
+            "Class":"all",
+            "Priority":"debug"
           }
         ]
+      }
+    },
+    {
+      "JSONSettings":{
+        "@name":"JSON",
+        "mAdminState":"enabled",
+        "JSONMaxNestingDepth":64,
+        "JSONMaxLabelLength":2560,
+        "JSONMaxValueLength":81920,
+        "JSONMaxNumberLength":128,
+        "JSONDocumentSize":41943040
       }
     },
     {
@@ -337,6 +440,209 @@
     },
     {
       "StylePolicyAction":{
+        "@name":"__default-accept-service-providers-filter-action__",
+        "mAdminState":"enabled",
+        "Type":"filter",
+        "Input":"NULL",
+        "Transform":"store:///filter-accept-service-providers.xsl",
+        "ParseSettingsReference":{
+          "URL":"",
+          "Literal":null,
+          "Default":null
+        },
+        "ParseMetricsResultType":"none",
+        "TransformLanguage":"none",
+        "ActionDebug":"off",
+        "NoTranscodeUtf8":"off",
+        "SSLClientConfigType":"proxy",
+        "Transactional":"off",
+        "SOAPValidation":"body",
+        "SQLSourceType":"static",
+        "JWSVerifyStripSignature":"on",
+        "Asynchronous":"off",
+        "ResultsMode":"first-available",
+        "RetryCount":0,
+        "RetryInterval":1000,
+        "MultipleOutputs":"off",
+        "IteratorType":"XPATH",
+        "Timeout":0,
+        "MethodRewriteType":"GET",
+        "MethodType":"POST",
+        "MethodType2":"POST"
+      }
+    },
+    {
+      "StylePolicyAction":{
+        "@name":"__default-accept-service-providers-results-action__",
+        "mAdminState":"enabled",
+        "Type":"results",
+        "Input":"INPUT",
+        "ParseSettingsReference":{
+          "URL":"",
+          "Literal":null,
+          "Default":null
+        },
+        "ParseMetricsResultType":"none",
+        "TransformLanguage":"none",
+        "ActionDebug":"off",
+        "NoTranscodeUtf8":"off",
+        "SSLClientConfigType":"proxy",
+        "Transactional":"off",
+        "SOAPValidation":"body",
+        "SQLSourceType":"static",
+        "JWSVerifyStripSignature":"on",
+        "Asynchronous":"off",
+        "ResultsMode":"first-available",
+        "RetryCount":0,
+        "RetryInterval":1000,
+        "MultipleOutputs":"off",
+        "IteratorType":"XPATH",
+        "Timeout":0,
+        "MethodRewriteType":"GET",
+        "MethodType":"POST",
+        "MethodType2":"POST"
+      }
+    },
+    {
+      "StylePolicyAction":{
+        "@name":"__dp-policy-call-action__",
+        "mAdminState":"enabled",
+        "UserSummary":"Call the next policy.",
+        "Type":"call",
+        "Input":"INPUT",
+        "ParseSettingsReference":{
+          "URL":"",
+          "Literal":null,
+          "Default":null
+        },
+        "ParseMetricsResultType":"none",
+        "TransformLanguage":"none",
+        "ActionDebug":"off",
+        "Output":"INPUT",
+        "NoTranscodeUtf8":"off",
+        "SSLClientConfigType":"proxy",
+        "Rule":"var://context/policy/fw/call-rule",
+        "Transactional":"off",
+        "SOAPValidation":"body",
+        "SQLSourceType":"static",
+        "JWSVerifyStripSignature":"on",
+        "Asynchronous":"off",
+        "ResultsMode":"first-available",
+        "RetryCount":0,
+        "RetryInterval":1000,
+        "MultipleOutputs":"off",
+        "IteratorType":"XPATH",
+        "Timeout":0,
+        "MethodRewriteType":"GET",
+        "MethodType":"POST",
+        "MethodType2":"POST"
+      }
+    },
+    {
+      "StylePolicyAction":{
+        "@name":"__dp-policy-init-xform-action__",
+        "mAdminState":"enabled",
+        "UserSummary":"Set up context vars and annotate map XML.",
+        "Type":"xform",
+        "Input":"NULL",
+        "Transform":"store://dp/policy-enforce-init.xsl",
+        "ParseSettingsReference":{
+          "URL":"",
+          "Literal":null,
+          "Default":null
+        },
+        "ParseMetricsResultType":"none",
+        "TransformLanguage":"none",
+        "ActionDebug":"off",
+        "Output":"NULL",
+        "NoTranscodeUtf8":"off",
+        "SSLClientConfigType":"proxy",
+        "Transactional":"off",
+        "SOAPValidation":"body",
+        "SQLSourceType":"static",
+        "JWSVerifyStripSignature":"on",
+        "Asynchronous":"off",
+        "ResultsMode":"first-available",
+        "RetryCount":0,
+        "RetryInterval":1000,
+        "MultipleOutputs":"off",
+        "IteratorType":"XPATH",
+        "Timeout":0,
+        "MethodRewriteType":"GET",
+        "MethodType":"POST",
+        "MethodType2":"POST"
+      }
+    },
+    {
+      "StylePolicyAction":{
+        "@name":"__dp-policy-results-action__",
+        "mAdminState":"enabled",
+        "UserSummary":"Results action for our policy enforcement rules.",
+        "Type":"results",
+        "Input":"INPUT",
+        "ParseSettingsReference":{
+          "URL":"",
+          "Literal":null,
+          "Default":null
+        },
+        "ParseMetricsResultType":"none",
+        "TransformLanguage":"none",
+        "ActionDebug":"off",
+        "NoTranscodeUtf8":"off",
+        "SSLClientConfigType":"proxy",
+        "Transactional":"off",
+        "SOAPValidation":"body",
+        "SQLSourceType":"static",
+        "JWSVerifyStripSignature":"on",
+        "Asynchronous":"off",
+        "ResultsMode":"first-available",
+        "RetryCount":0,
+        "RetryInterval":1000,
+        "MultipleOutputs":"off",
+        "IteratorType":"XPATH",
+        "Timeout":0,
+        "MethodRewriteType":"GET",
+        "MethodType":"POST",
+        "MethodType2":"POST"
+      }
+    },
+    {
+      "StylePolicyAction":{
+        "@name":"__dp-policy-traverse-xform-action__",
+        "mAdminState":"enabled",
+        "UserSummary":"Identify next policy by traversing the annotated map.",
+        "Type":"xform",
+        "Input":"NULL",
+        "Transform":"store://dp/policy-enforce-traverse.xsl",
+        "ParseSettingsReference":{
+          "URL":"",
+          "Literal":null,
+          "Default":null
+        },
+        "ParseMetricsResultType":"none",
+        "TransformLanguage":"none",
+        "ActionDebug":"off",
+        "Output":"NULL",
+        "NoTranscodeUtf8":"off",
+        "SSLClientConfigType":"proxy",
+        "Transactional":"off",
+        "SOAPValidation":"body",
+        "SQLSourceType":"static",
+        "JWSVerifyStripSignature":"on",
+        "Asynchronous":"off",
+        "ResultsMode":"first-available",
+        "RetryCount":0,
+        "RetryInterval":1000,
+        "MultipleOutputs":"off",
+        "IteratorType":"XPATH",
+        "Timeout":0,
+        "MethodRewriteType":"GET",
+        "MethodType":"POST",
+        "MethodType2":"POST"
+      }
+    },
+    {
+      "StylePolicyAction":{
         "@name":"_webappfw_sql-json",
         "mAdminState":"enabled",
         "Type":"convert-http",
@@ -367,6 +673,55 @@
         "MethodRewriteType":"GET",
         "MethodType":"POST",
         "MethodType2":"POST"
+      }
+    },
+    {
+      "StylePolicyRule":{
+        "@name":"__default-accept-service-providers-request__",
+        "mAdminState":"enabled",
+        "UserSummary":"Accept messages intended for known services, reject everything else.",
+        "Actions":[
+          "__default-accept-service-providers-filter-action__",
+          "__default-accept-service-providers-results-action__"
+        ],
+        "Direction":"request-rule",
+        "InputFormat":"none",
+        "OutputFormat":"none",
+        "NonXMLProcessing":"off",
+        "Unprocessed":"off"
+      }
+    },
+    {
+      "StylePolicyRule":{
+        "@name":"__default-accept-service-providers-response__",
+        "mAdminState":"enabled",
+        "UserSummary":"Accept responses received from known services.",
+        "Actions":[
+          "__default-accept-service-providers-results-action__"
+        ],
+        "Direction":"response-rule",
+        "InputFormat":"none",
+        "OutputFormat":"none",
+        "NonXMLProcessing":"off",
+        "Unprocessed":"off"
+      }
+    },
+    {
+      "StylePolicyRule":{
+        "@name":"__dp-policy-begin__",
+        "mAdminState":"enabled",
+        "UserSummary":"Initiate policy enforcement by annotating policy and determining first policy to enforce.",
+        "Actions":[
+          "__dp-policy-init-xform-action__",
+          "__dp-policy-traverse-xform-action__",
+          "__dp-policy-call-action__",
+          "__dp-policy-results-action__"
+        ],
+        "Direction":"rule",
+        "InputFormat":"none",
+        "OutputFormat":"none",
+        "NonXMLProcessing":"off",
+        "Unprocessed":"off"
       }
     },
     {
@@ -663,21 +1018,154 @@
       }
     },
     {
-      "FTPFilePollerSourceProtocolHandler":{
+      "XMLManager":{
         "@name":"test",
         "mAdminState":"enabled",
-        "TargetDirectory":"test",
-        "DelayBetweenPolls":60000,
-        "InputFileMatchPattern":"test",
-        "DeleteOnSuccess":"off",
-        "SuccessRenamePattern":"$1.processed.ok",
-        "DeleteOnError":"off",
-        "ErrorRenamePattern":"$0.processed.error",
-        "GenerateResultFile":"on",
-        "ResultNamePattern":"test",
-        "ProcessingSeizeTimeout":0,
+        "CacheMemorySize":2147483647,
+        "CacheSize":256,
+        "SHA1Caching":"on",
+        "StaticDocumentCalls":"on",
+        "Memoization":"on",
+        "ParserLimitsBytesScanned":4194304,
+        "ParserLimitsElementDepth":512,
+        "ParserLimitsAttributeCount":128,
+        "ParserLimitsMaxNodeSize":33554432,
+        "ParserLimitsForbidExternalReferences":"on",
+        "ParserLimitsExternalReferences":"forbid",
+        "ParserLimitsMaxPrefixes":1024,
+        "ParserLimitsMaxNamespaces":1024,
+        "ParserLimitsMaxLocalNames":60000,
+        "DocCacheMaxDocs":5000,
+        "DocCacheSize":0,
+        "DocMaxWrites":32768,
+        "UserAgent":"default"
+      }
+    },
+    {
+      "MQQM":{
+        "@name":"TEST_MQ",
+        "mAdminState":"disabled",
+        "HostName":"172.30.1.100",
+        "QMname":"MQ_DEV",
+        "CCSID":819,
+        "ChannelName":"SYSTEM.DEF.SVRCONN",
+        "Heartbeat":300,
+        "MaximumMessageSize":1048576,
+        "CacheTimeout":60,
+        "UnitsOfWork":null,
+        "AutomaticBackout":"off",
+        "TotalConnectionLimit":250,
+        "InitialConnections":1,
+        "SharingConversations":0,
+        "ShareSingleConversation":"off",
+        "PermitInsecureServers":"off",
+        "PermitSSLv3":"off",
+        "SSLcipher":"none",
+        "AutoRecovery":"off",
+        "ConvertInput":"on",
+        "AutoRetry":"on",
+        "RetryInterval":1,
+        "RetryAttempts":0,
+        "LongRetryInterval":1800,
+        "ReportingInterval":1,
+        "AlternateUser":"on",
+        "PollingTolerance":10,
         "XMLManager":"default",
-        "MaxTransfersPerPoll":0
+        "SSLClientConfigType":"proxy"
+      }
+    },
+    {
+      "HTTPSourceProtocolHandler":{
+        "@name":"test1_HTTP_FSH",
+        "mAdminState":"enabled",
+        "LocalAddress":"dp_virtual",
+        "LocalPort":9001,
+        "HTTPVersion":"HTTP/1.1",
+        "AllowedFeatures":{
+          "HTTP-1.0":"on",
+          "HTTP-1.1":"on",
+          "HTTP-2.0":"off",
+          "POST":"on",
+          "GET":"off",
+          "PUT":"on",
+          "PATCH":"off",
+          "HEAD":"off",
+          "OPTIONS":"off",
+          "TRACE":"off",
+          "DELETE":"off",
+          "CONNECT":"off",
+          "CustomMethods":"off",
+          "QueryString":"on",
+          "FragmentIdentifiers":"on",
+          "DotDot":"off",
+          "DotDotInPath":"off",
+          "DotDotInQueryString":"off",
+          "CmdExe":"off"
+        },
+        "PersistentConnections":"on",
+        "MaxPersistentConnectionsReuse":0,
+        "AllowCompression":"off",
+        "AllowWebSocketUpgrade":"off",
+        "WebSocketIdleTimeout":0,
+        "MaxURLLen":16384,
+        "MaxTotalHdrLen":128000,
+        "MaxHdrCount":0,
+        "MaxNameHdrLen":0,
+        "MaxValueHdrLen":0,
+        "MaxQueryStringLen":0,
+        "CredentialCharset":"protocol",
+        "HTTP2MaxStreams":100,
+        "HTTP2MaxFrameSize":16384,
+        "HTTP2StreamHeader":"off",
+        "ChunkedEncoding":"on",
+        "HeaderTimeout":30000
+      }
+    },
+    {
+      "HTTPSourceProtocolHandler":{
+        "@name":"test2_HTTP_FSH",
+        "mAdminState":"enabled",
+        "LocalAddress":"dpvirtual1.decsoft.com.pl",
+        "LocalPort":9001,
+        "HTTPVersion":"HTTP/1.1",
+        "AllowedFeatures":{
+          "HTTP-1.0":"on",
+          "HTTP-1.1":"on",
+          "HTTP-2.0":"off",
+          "POST":"on",
+          "GET":"off",
+          "PUT":"on",
+          "PATCH":"off",
+          "HEAD":"off",
+          "OPTIONS":"off",
+          "TRACE":"off",
+          "DELETE":"off",
+          "CONNECT":"off",
+          "CustomMethods":"off",
+          "QueryString":"on",
+          "FragmentIdentifiers":"on",
+          "DotDot":"off",
+          "DotDotInPath":"off",
+          "DotDotInQueryString":"off",
+          "CmdExe":"off"
+        },
+        "PersistentConnections":"on",
+        "MaxPersistentConnectionsReuse":0,
+        "AllowCompression":"off",
+        "AllowWebSocketUpgrade":"off",
+        "WebSocketIdleTimeout":0,
+        "MaxURLLen":16384,
+        "MaxTotalHdrLen":128000,
+        "MaxHdrCount":0,
+        "MaxNameHdrLen":0,
+        "MaxValueHdrLen":0,
+        "MaxQueryStringLen":0,
+        "CredentialCharset":"protocol",
+        "HTTP2MaxStreams":100,
+        "HTTP2MaxFrameSize":16384,
+        "HTTP2StreamHeader":"off",
+        "ChunkedEncoding":"on",
+        "HeaderTimeout":30000
       }
     },
     {
@@ -704,9 +1192,7 @@
         "PersistenceLocation":"memory",
         "LocalDirectory":"local:///",
         "LogLevel":"internal",
-        "MaxMemory":0,
-        "StatusFileMaxSize":100,
-        "StatusFileMaxRotation":100
+        "MaxMemory":0
       }
     },
     {
@@ -722,7 +1208,7 @@
     },
     {
       "PolicyAttachments":{
-        "@name":"test",
+        "@name":"test_MPGW",
         "mAdminState":"enabled",
         "EnforcementMode":"enforce",
         "PolicyReferences":"on",
@@ -731,11 +1217,11 @@
     },
     {
       "MultiProtocolGateway":{
-        "@name":"test",
+        "@name":"test_MPGW",
         "mAdminState":"enabled",
         "Priority":"normal",
         "FrontProtocol":[
-          "test"
+          "test1_HTTP_FSH"
         ],
         "XMLManager":"default",
         "SSLClientConfigType":"proxy",
@@ -833,7 +1319,7 @@
         "AllowCompression":"off",
         "EnableCompressedPayloadPassthrough":"off",
         "AllowCacheControlHeader":"off",
-        "PolicyAttachments":"test",
+        "PolicyAttachments":"test_MPGW",
         "WSMAgentMonitor":"off",
         "WSMAgentMonitorPCM":"all-messages",
         "ProxyHTTPResponse":"off",
@@ -843,7 +1329,7 @@
     {
       "Statistics":{
         "@name":"default",
-        "mAdminState":"disabled",
+        "mAdminState":"enabled",
         "LoadInterval":1000
       }
     },
@@ -877,7 +1363,7 @@
         "@name":"default",
         "mAdminState":"disabled",
         "MaxRecords":1000,
-        "Expiration":60,
+        "Expiration":3600,
         "GatewayPeering":"default-gateway-peering"
       }
     },
@@ -885,8 +1371,7 @@
       "APISecurityTokenManager":{
         "@name":"default",
         "mAdminState":"disabled",
-        "GatewayPeering":"default-gateway-peering",
-        "ExpiredTokenCleanupInterval":180
+        "GatewayPeering":"default-gateway-peering"
       }
     },
     {
@@ -905,6 +1390,7 @@
         "@name":"default",
         "mAdminState":"enabled",
         "Ciphers":[
+          "CHACHA20-POLY1305_AT_OPENSSH.COM",
           "AES128-CTR",
           "AES192-CTR",
           "AES256-CTR",
@@ -919,6 +1405,11 @@
           "DIFFIE-HELLMAN-GROUP-EXCHANGE-SHA256"
         ],
         "MACAlg":[
+          "UMAC-64-ETM_AT_OPENSSH.COM",
+          "UMAC-128-ETM_AT_OPENSSH.COM",
+          "HMAC-SHA2-256-ETM_AT_OPENSSH.COM",
+          "HMAC-SHA2-512-ETM_AT_OPENSSH.COM",
+          "HMAC-SHA1-ETM_AT_OPENSSH.COM",
           "UMAC-64_AT_OPENSSH.COM",
           "UMAC-128_AT_OPENSSH.COM",
           "HMAC-SHA2-256",
@@ -933,6 +1424,7 @@
         "@name":"default",
         "mAdminState":"enabled",
         "Ciphers":[
+          "CHACHA20-POLY1305_AT_OPENSSH.COM",
           "AES128-CTR",
           "AES192-CTR",
           "AES256-CTR",
@@ -947,6 +1439,11 @@
           "DIFFIE-HELLMAN-GROUP-EXCHANGE-SHA256"
         ],
         "MACAlg":[
+          "UMAC-64-ETM_AT_OPENSSH.COM",
+          "UMAC-128-ETM_AT_OPENSSH.COM",
+          "HMAC-SHA2-256-ETM_AT_OPENSSH.COM",
+          "HMAC-SHA2-512-ETM_AT_OPENSSH.COM",
+          "HMAC-SHA1-ETM_AT_OPENSSH.COM",
           "UMAC-64_AT_OPENSSH.COM",
           "UMAC-128_AT_OPENSSH.COM",
           "HMAC-SHA2-256",
@@ -971,7 +1468,7 @@
         "MonitoredService":[
           {
             "WSGatewayName":null,
-            "MultiProtocolGatewayName":"test"
+            "MultiProtocolGatewayName":"test_MPGW"
           }
         ]
       }
@@ -997,7 +1494,7 @@
         "@name":"default",
         "mAdminState":"disabled",
         "MaxRecords":1000,
-        "Expiration":3600,
+        "Expiration":18011,
         "GatewayPeering":"default-gateway-peering"
       }
     },
@@ -1033,21 +1530,9 @@
       }
     },
     {
-      "HTTPService":{
-
-        "@name":"Serwer_HTTP_DEV",
-        "mAdminState":"enabled",
-        "LocalAddress":"0.0.0.0",
-        "Priority":"normal",
-        "LocalPort":8080,
-        "Mode":"normal",
-        "BaseDir":"store:///"
-      }
-    },
-    {
       "WebServicesAgent":{
         "@name":"default",
-        "mAdminState":"disabled",
+        "mAdminState":"enabled",
         "MaxRecords":3000,
         "MaxMemoryKB":64000,
         "CaptureMode":"faults",
