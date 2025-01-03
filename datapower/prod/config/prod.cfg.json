@@ -1,6 +1,6 @@
 {
   "@build":"370456",
-  "@timestamp":"Fri Jan  3 07:22:23 2025",
+  "@timestamp":"Thu Jan  2 14:30:18 2025",
   "configuration":[
     {
       "DomainSettings":{
@@ -15,15 +15,15 @@
         "@name":"github",
         "mAdminState":"enabled",
         "Version":1,
-        "EncryptedPassword":"NNvtA6yjKZrL8WJvJkhBc2CICHXOfgYPbxCMa7ryEL60+thfaFrDb1pj+m8O0kDuGIBqUmQwu636DH4jSyYTHw=="
+        "EncryptedPassword":"6We4LUWj3YL1K/7GKw42UXU0TpF/shSBPANlXsQmKHnfgxqObHMdezNpN0hW13NQk7PAqXxVrnSqRetpSxiEBQ=="
       }
     },
     {
       "PasswordAlias":{
         "@name":"haslo_github",
         "mAdminState":"enabled",
-        "Version":1,
-        "EncryptedPassword":"4gmCJBI/HKeQEnYhye0N6Ri/nEI+tU+28W43KHip9xM="
+        "Version":0,
+        "EncryptedPassword":"RLtSP5whrygc5fJEQaxDUCU1VL8nqnU+aENABceLiWM="
       }
     },
     {
@@ -56,6 +56,9 @@
       "CryptoValCred":{
         "@name":"github",
         "mAdminState":"enabled",
+        "Certificate":[
+          "github"
+        ],
         "CertValidationMode":"legacy",
         "UseCRL":"on",
         "RequireCRL":"off",
@@ -1030,11 +1033,11 @@
     },
     {
       "HTTPService":{
-        "@name":"Serwer_HTTP",
+        "@name":"Serwer_HTTP_DEV",
         "mAdminState":"enabled",
         "LocalAddress":"0.0.0.0",
         "Priority":"normal",
-        "LocalPort":8081,
+        "LocalPort":8080,
         "Mode":"normal",
         "BaseDir":"store:///"
       }

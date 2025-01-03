@@ -1,0 +1,4 @@
+to jest pierwszy wpis w main
+drugi wpis w main
+drugi wpis w feature1
+wpis dodany podczas merge
