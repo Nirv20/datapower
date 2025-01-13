@@ -1,6 +1,6 @@
 {
   "@build":"370456",
-  "@timestamp":"Mon Jan 13 09:04:44 2025",
+  "@timestamp":"Mon Jan 13 09:29:02 2025",
   "configuration":[
     {
       "GitOpsTemplate":{
@@ -19,7 +19,7 @@
           {
             "TemplateType":"change",
             "ClassName":"HTTPSourceProtocolHandler",
-            "Name":"test",
+            "Name":"HTTP_FSH",
             "Field":"LocalPort",
             "Value":"9443",
             "ValueInverse":null,
