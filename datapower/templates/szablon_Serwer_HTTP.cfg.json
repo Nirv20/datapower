@@ -10,8 +10,8 @@
           {
             "TemplateType":"change",
             "ClassName":"HTTPService",
-            "Name":"Serwer_HTTP_DEV",
-            "Field":"LocalAddress",
+            "Name":"Serwer_HTTP.*",
+            "Field":"LocalPort",
             "Value":"8090",
             "ValueInverse":null,
             "ValueValidate":null
