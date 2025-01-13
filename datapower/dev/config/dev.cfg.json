@@ -917,7 +917,7 @@
     },
     {
       "HTTPSourceProtocolHandler":{
-        "@name":"Handler_TEST2",
+        "@name":"Handler_HTTP1",
         "mAdminState":"enabled",
         "LocalAddress":"0.0.0.0",
         "LocalPort":9000,
@@ -1114,7 +1114,7 @@
         "mAdminState":"enabled",
         "Priority":"normal",
         "FrontProtocol":[
-          "Handler_TEST2"
+          "Handler_HTTP1"
         ],
         "XMLManager":"default",
         "SSLClientConfigType":"proxy",
