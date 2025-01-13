@@ -1,6 +1,6 @@
 {
   "@build":"370456",
-  "@timestamp":"Mon Jan 13 04:47:44 2025",
+  "@timestamp":"Mon Jan 13 04:57:14 2025",
   "configuration":[
     {
       "DomainSettings":{
@@ -1131,11 +1131,11 @@
     },
     {
       "MultiProtocolGateway":{
-        "@name":"test",
+        "@name":"test_MPGW",
         "mAdminState":"enabled",
         "Priority":"normal",
         "FrontProtocol":[
-          "test"
+          "Handler_HTTP1"
         ],
         "XMLManager":"default",
         "SSLClientConfigType":"proxy",
@@ -1184,11 +1184,6 @@
         "ProcessHTTPErrors":"on",
         "HTTPClientIPLabel":"X-Client-IP",
         "HTTPLogCorIDLabel":"X-Global-Transaction-ID",
-        "InOrderMode":{
-          "Request":"off",
-          "Backend":"off",
-          "Response":"off"
-        },
         "WSAMode":"sync2sync",
         "WSARequireAAA":"on",
         "WSAStrip":"on",
@@ -1233,7 +1228,6 @@
         "AllowCompression":"off",
         "EnableCompressedPayloadPassthrough":"off",
         "AllowCacheControlHeader":"off",
-        "PolicyAttachments":"test",
         "WSMAgentMonitor":"off",
         "WSMAgentMonitorPCM":"all-messages",
         "ProxyHTTPResponse":"off",
@@ -1371,7 +1365,7 @@
         "MonitoredService":[
           {
             "WSGatewayName":null,
-            "MultiProtocolGatewayName":"test"
+            "MultiProtocolGatewayName":"test_MPGW"
           }
         ]
       }
