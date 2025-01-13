@@ -1,6 +1,6 @@
 {
   "@build":"370456",
-  "@timestamp":"Mon Jan 13 05:39:53 2025",
+  "@timestamp":"Mon Jan 13 06:07:03 2025",
   "configuration":[
     {
       "GitOpsTemplate":{
@@ -10,14 +10,13 @@
           {
             "TemplateType":"change",
             "ClassName":"SSLClientProfile",
-            "Name":".*",
+            "Name":"szablon_TLS",
             "Field":"Protocols",
-            "Value":"SSLv3:off,TLSv1d0:off,TLSv1d1:off,TLSv1d2:off,TLSv1d3:on\t",
-            "ValueInverse":null,
-            "ValueValidate":null
+            "Value":"SSLv3:off,TLSv1d0:off,TLSv1d1:off,TLSv1d2:off,TLSv1d3:on",
+            "ValueInverse":"",
+            "ValueValidate":""
           }
-        ],
-        "VariableRef":"gitops-variables"
+        ]
       }
     }
   ]
