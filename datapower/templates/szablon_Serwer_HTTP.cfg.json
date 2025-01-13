@@ -12,8 +12,6 @@
             "ClassName":"HTTPService",
             "Name":"Serwer_HTTP.*",
             "Field":"LocalPort",
-            "Name":"Serwer_HTTP_DEV",
-            "Field":"LocalAddress",
             "Value":"8090",
             "ValueInverse":null,
             "ValueValidate":null
