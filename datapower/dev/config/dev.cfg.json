@@ -1,6 +1,6 @@
 {
   "@build":"370456",
-  "@timestamp":"Mon Jan 13 06:20:15 2025",
+  "@timestamp":"Mon Jan 13 06:59:57 2025",
   "configuration":[
     {
       "DomainSettings":{
@@ -975,7 +975,7 @@
           "HTTP-1.1":"off",
           "HTTP-2.0":"off",
           "POST":"off",
-          "GET":"on",
+          "GET":"off",
           "PUT":"on",
           "PATCH":"on",
           "HEAD":"off",
@@ -1013,31 +1013,31 @@
     },
     {
       "HTTPSourceProtocolHandler":{
-        "@name":"HTTP_Handler3",
+        "@name":"Handler_HTTP3",
         "mAdminState":"enabled",
         "LocalAddress":"0.0.0.0",
-        "LocalPort":9002,
+        "LocalPort":9003,
         "HTTPVersion":"HTTP/1.1",
         "AllowedFeatures":{
           "HTTP-1.0":"on",
           "HTTP-1.1":"on",
-          "HTTP-2.0":"off",
-          "POST":"off",
+          "HTTP-2.0":"on",
+          "POST":"on",
           "GET":"on",
-          "PUT":"off",
-          "PATCH":"off",
-          "HEAD":"off",
-          "OPTIONS":"off",
-          "TRACE":"off",
-          "DELETE":"off",
+          "PUT":"on",
+          "PATCH":"on",
+          "HEAD":"on",
+          "OPTIONS":"on",
+          "TRACE":"on",
+          "DELETE":"on",
           "CONNECT":"off",
-          "CustomMethods":"off",
+          "CustomMethods":"on",
           "QueryString":"on",
           "FragmentIdentifiers":"on",
-          "DotDot":"off",
+          "DotDot":"on",
           "DotDotInPath":"off",
           "DotDotInQueryString":"off",
-          "CmdExe":"off"
+          "CmdExe":"on"
         },
         "PersistentConnections":"on",
         "MaxPersistentConnectionsReuse":0,
@@ -1411,7 +1411,7 @@
         "mAdminState":"enabled",
         "LocalAddress":"0.0.0.0",
         "Priority":"normal",
-        "LocalPort":8090,
+        "LocalPort":8080,
         "Mode":"normal",
         "BaseDir":"store:///"
       }
