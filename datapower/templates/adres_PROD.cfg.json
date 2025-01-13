@@ -1,0 +1,32 @@
+{
+  "@build":"370456",
+  "@timestamp":"Mon Jan 13 09:04:44 2025",
+  "configuration":[
+    {
+      "GitOpsTemplate":{
+        "@name":"adres_PROD",
+        "mAdminState":"enabled",
+        "Templates":[
+          {
+            "TemplateType":"change",
+            "ClassName":"MultiProtocolGateway",
+            "Name":"test",
+            "Field":"BackendUrl",
+            "Value":"https://prod.sample.com:443",
+            "ValueInverse":null,
+            "ValueValidate":null
+          },
+          {
+            "TemplateType":"change",
+            "ClassName":"HTTPSourceProtocolHandler",
+            "Name":"test",
+            "Field":"LocalPort",
+            "Value":"9443",
+            "ValueInverse":null,
+            "ValueValidate":null
+          }
+        ]
+      }
+    }
+  ]
+}
