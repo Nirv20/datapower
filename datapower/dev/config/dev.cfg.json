@@ -1256,6 +1256,13 @@
     {
       "DomainAvailability":{
         "@name":"default",
+        "mAdminState":"disabled",
+        "MonitoredService":[
+          {
+            "WSGatewayName":null,
+            "MultiProtocolGatewayName":"test_MPGW"
+          }
+        ]
         "mAdminState":"disabled"
       }
     },
