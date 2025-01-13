@@ -1,6 +1,6 @@
 {
   "@build":"370456",
-  "@timestamp":"Mon Jan 13 07:07:23 2025",
+  "@timestamp":"Mon Jan 13 07:14:20 2025",
   "configuration":[
     {
       "GitOpsTemplate":{
@@ -25,8 +25,7 @@
             "ValueInverse":null,
             "ValueValidate":null
           }
-        ],
-        "VariableRef":"gitops-variables"
+        ]
       }
     }
   ]
