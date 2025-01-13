@@ -1,6 +1,6 @@
 {
   "@build":"370456",
-  "@timestamp":"Mon Jan 13 08:35:01 2025",
+  "@timestamp":"Mon Jan 13 07:10:04 2025",
   "configuration":[
     {
       "DomainSettings":{
@@ -14,16 +14,24 @@
       "PasswordAlias":{
         "@name":"github",
         "mAdminState":"enabled",
+        "Version":0,
+        "EncryptedPassword":"6We4LUWj3YL1K/7GKw42UXU0TpF/shSBPANlXsQmKHnfgxqObHMdezNpN0hW13NQk7PAqXxVrnSqRetpSxiEBQ=="
+      }
+    },
+    {
+      "PasswordAlias":{
+        "@name":"github_pass",
+        "mAdminState":"enabled",
         "Version":1,
-        "EncryptedPassword":"OUNVBd/ZK9rwAA5UEToY9NjHjbiZbm/oA8oOwxlhdrVH7PNnLEHU04EyBr+VldJpgfzX+shA19d7NxT/uJc51Q=="
+        "EncryptedPassword":"WznqJ2pA5uNJoiSSrJlEVDRf5EgyjCBZSbuYLEAgu3A4H27tWuQwMzvvdc90IiKhsknBPNxX5t/71AgUbfbkjQ=="
       }
     },
     {
       "PasswordAlias":{
         "@name":"haslo_github",
         "mAdminState":"enabled",
-        "Version":1,
-        "EncryptedPassword":"LtYEEcXM4UMZxYLbHUMMDh8AtrOtwczw5/ihEfJRNVk="
+        "Version":0,
+        "EncryptedPassword":"RLtSP5whrygc5fJEQaxDUCU1VL8nqnU+aENABceLiWM="
       }
     },
     {
@@ -56,6 +64,9 @@
       "CryptoValCred":{
         "@name":"github",
         "mAdminState":"enabled",
+        "Certificate":[
+          "github"
+        ],
         "CertValidationMode":"legacy",
         "UseCRL":"on",
         "RequireCRL":"off",
@@ -83,6 +94,234 @@
         ],
         "ExplicitPolicy":"off",
         "CheckDates":"off"
+      }
+    },
+    {
+      "SSLClientProfile":{
+        "@name":"TLS_klient1",
+        "mAdminState":"enabled",
+        "Ciphers":[
+          "AES_256_GCM_SHA384",
+          "CHACHA20_POLY1305_SHA256",
+          "AES_128_GCM_SHA256",
+          "ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+          "ECDHE_ECDSA_WITH_AES_256_CBC_SHA384",
+          "ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+          "ECDHE_ECDSA_WITH_AES_128_CBC_SHA256",
+          "ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+          "ECDHE_ECDSA_WITH_AES_128_CBC_SHA",
+          "ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+          "ECDHE_RSA_WITH_AES_256_CBC_SHA384",
+          "ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+          "ECDHE_RSA_WITH_AES_128_CBC_SHA256",
+          "ECDHE_RSA_WITH_AES_256_CBC_SHA",
+          "ECDHE_RSA_WITH_AES_128_CBC_SHA",
+          "DHE_RSA_WITH_AES_256_GCM_SHA384",
+          "DHE_RSA_WITH_AES_256_CBC_SHA256",
+          "DHE_RSA_WITH_AES_128_GCM_SHA256",
+          "DHE_RSA_WITH_AES_128_CBC_SHA256",
+          "DHE_RSA_WITH_AES_256_CBC_SHA",
+          "DHE_RSA_WITH_AES_128_CBC_SHA"
+        ],
+        "ValidateServerCert":"on",
+        "Valcred":"github",
+        "Caching":"on",
+        "CacheTimeout":300,
+        "CacheSize":100,
+        "SSLClientFeatures":{
+          "use-sni":"on",
+          "permit-insecure-servers":"off",
+          "compression":"off"
+        },
+        "EllipticCurves":[
+          "secp521r1",
+          "secp384r1",
+          "secp256k1",
+          "secp256r1"
+        ],
+        "UseCustomSNIHostname":"no",
+        "ValidateHostname":"off",
+        "HostnameValidationFailOnError":"off",
+        "EnableTLS13Compat":"on",
+        "DisableRenegotiation":"off",
+        "SigAlgs":[
+          "ecdsa_secp256r1_sha256",
+          "ecdsa_secp384r1_sha384",
+          "ecdsa_secp521r1_sha512",
+          "ed25519",
+          "ed448",
+          "rsa_pss_pss_sha256",
+          "rsa_pss_pss_sha384",
+          "rsa_pss_pss_sha512",
+          "rsa_pss_rsae_sha256",
+          "rsa_pss_rsae_sha384",
+          "rsa_pss_rsae_sha512",
+          "rsa_pkcs1_sha256",
+          "rsa_pkcs1_sha384",
+          "rsa_pkcs1_sha512",
+          "ecdsa_sha224",
+          "ecdsa_sha1",
+          "rsa_pkcs1_sha224",
+          "rsa_pkcs1_sha1",
+          "dsa_sha224",
+          "dsa_sha1",
+          "dsa_sha256",
+          "dsa_sha384",
+          "dsa_sha512"
+        ],
+        "RequireClosureNotification":"on"
+      }
+    },
+    {
+      "SSLClientProfile":{
+        "@name":"TLS_klient2",
+        "mAdminState":"enabled",
+        "Ciphers":[
+          "AES_256_GCM_SHA384",
+          "CHACHA20_POLY1305_SHA256",
+          "AES_128_GCM_SHA256",
+          "ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+          "ECDHE_ECDSA_WITH_AES_256_CBC_SHA384",
+          "ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+          "ECDHE_ECDSA_WITH_AES_128_CBC_SHA256",
+          "ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+          "ECDHE_ECDSA_WITH_AES_128_CBC_SHA",
+          "ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+          "ECDHE_RSA_WITH_AES_256_CBC_SHA384",
+          "ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+          "ECDHE_RSA_WITH_AES_128_CBC_SHA256",
+          "ECDHE_RSA_WITH_AES_256_CBC_SHA",
+          "ECDHE_RSA_WITH_AES_128_CBC_SHA",
+          "DHE_RSA_WITH_AES_256_GCM_SHA384",
+          "DHE_RSA_WITH_AES_256_CBC_SHA256",
+          "DHE_RSA_WITH_AES_128_GCM_SHA256",
+          "DHE_RSA_WITH_AES_128_CBC_SHA256",
+          "DHE_RSA_WITH_AES_256_CBC_SHA",
+          "DHE_RSA_WITH_AES_128_CBC_SHA"
+        ],
+        "ValidateServerCert":"on",
+        "Valcred":"github",
+        "Caching":"on",
+        "CacheTimeout":300,
+        "CacheSize":100,
+        "SSLClientFeatures":{
+          "use-sni":"on",
+          "permit-insecure-servers":"off",
+          "compression":"off"
+        },
+        "EllipticCurves":[
+          "secp521r1",
+          "secp384r1",
+          "secp256k1",
+          "secp256r1"
+        ],
+        "UseCustomSNIHostname":"no",
+        "ValidateHostname":"off",
+        "HostnameValidationFailOnError":"off",
+        "EnableTLS13Compat":"on",
+        "DisableRenegotiation":"off",
+        "SigAlgs":[
+          "ecdsa_secp256r1_sha256",
+          "ecdsa_secp384r1_sha384",
+          "ecdsa_secp521r1_sha512",
+          "ed25519",
+          "ed448",
+          "rsa_pss_pss_sha256",
+          "rsa_pss_pss_sha384",
+          "rsa_pss_pss_sha512",
+          "rsa_pss_rsae_sha256",
+          "rsa_pss_rsae_sha384",
+          "rsa_pss_rsae_sha512",
+          "rsa_pkcs1_sha256",
+          "rsa_pkcs1_sha384",
+          "rsa_pkcs1_sha512",
+          "ecdsa_sha224",
+          "ecdsa_sha1",
+          "rsa_pkcs1_sha224",
+          "rsa_pkcs1_sha1",
+          "dsa_sha224",
+          "dsa_sha1",
+          "dsa_sha256",
+          "dsa_sha384",
+          "dsa_sha512"
+        ],
+        "RequireClosureNotification":"on"
+      }
+    },
+    {
+      "SSLClientProfile":{
+        "@name":"TLS_klient3",
+        "mAdminState":"enabled",
+        "Ciphers":[
+          "AES_256_GCM_SHA384",
+          "CHACHA20_POLY1305_SHA256",
+          "AES_128_GCM_SHA256",
+          "ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+          "ECDHE_ECDSA_WITH_AES_256_CBC_SHA384",
+          "ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+          "ECDHE_ECDSA_WITH_AES_128_CBC_SHA256",
+          "ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+          "ECDHE_ECDSA_WITH_AES_128_CBC_SHA",
+          "ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+          "ECDHE_RSA_WITH_AES_256_CBC_SHA384",
+          "ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+          "ECDHE_RSA_WITH_AES_128_CBC_SHA256",
+          "ECDHE_RSA_WITH_AES_256_CBC_SHA",
+          "ECDHE_RSA_WITH_AES_128_CBC_SHA",
+          "DHE_RSA_WITH_AES_256_GCM_SHA384",
+          "DHE_RSA_WITH_AES_256_CBC_SHA256",
+          "DHE_RSA_WITH_AES_128_GCM_SHA256",
+          "DHE_RSA_WITH_AES_128_CBC_SHA256",
+          "DHE_RSA_WITH_AES_256_CBC_SHA",
+          "DHE_RSA_WITH_AES_128_CBC_SHA"
+        ],
+        "ValidateServerCert":"on",
+        "Valcred":"github",
+        "Caching":"on",
+        "CacheTimeout":300,
+        "CacheSize":100,
+        "SSLClientFeatures":{
+          "use-sni":"on",
+          "permit-insecure-servers":"off",
+          "compression":"off"
+        },
+        "EllipticCurves":[
+          "secp521r1",
+          "secp384r1",
+          "secp256k1",
+          "secp256r1"
+        ],
+        "UseCustomSNIHostname":"no",
+        "ValidateHostname":"off",
+        "HostnameValidationFailOnError":"off",
+        "EnableTLS13Compat":"on",
+        "DisableRenegotiation":"off",
+        "SigAlgs":[
+          "ecdsa_secp256r1_sha256",
+          "ecdsa_secp384r1_sha384",
+          "ecdsa_secp521r1_sha512",
+          "ed25519",
+          "ed448",
+          "rsa_pss_pss_sha256",
+          "rsa_pss_pss_sha384",
+          "rsa_pss_pss_sha512",
+          "rsa_pss_rsae_sha256",
+          "rsa_pss_rsae_sha384",
+          "rsa_pss_rsae_sha512",
+          "rsa_pkcs1_sha256",
+          "rsa_pkcs1_sha384",
+          "rsa_pkcs1_sha512",
+          "ecdsa_sha224",
+          "ecdsa_sha1",
+          "rsa_pkcs1_sha224",
+          "rsa_pkcs1_sha1",
+          "dsa_sha224",
+          "dsa_sha1",
+          "dsa_sha256",
+          "dsa_sha384",
+          "dsa_sha512"
+        ],
+        "RequireClosureNotification":"on"
       }
     },
     {
@@ -678,17 +917,17 @@
     },
     {
       "HTTPSourceProtocolHandler":{
-        "@name":"HTTP_FSH",
+        "@name":"Handler_HTTP1",
         "mAdminState":"enabled",
         "LocalAddress":"0.0.0.0",
-        "LocalPort":10000,
+        "LocalPort":9000,
         "HTTPVersion":"HTTP/1.1",
         "AllowedFeatures":{
           "HTTP-1.0":"on",
           "HTTP-1.1":"on",
           "HTTP-2.0":"off",
           "POST":"on",
-          "GET":"off",
+          "GET":"{{ change_HTTPSourceProtocolHandler_Handler.*_AllowedFeatures.GET }}",
           "PUT":"on",
           "PATCH":"off",
           "HEAD":"off",
@@ -703,6 +942,102 @@
           "DotDotInPath":"off",
           "DotDotInQueryString":"off",
           "CmdExe":"off"
+        },
+        "PersistentConnections":"on",
+        "MaxPersistentConnectionsReuse":0,
+        "AllowCompression":"off",
+        "AllowWebSocketUpgrade":"off",
+        "WebSocketIdleTimeout":0,
+        "MaxURLLen":16384,
+        "MaxTotalHdrLen":128000,
+        "MaxHdrCount":0,
+        "MaxNameHdrLen":0,
+        "MaxValueHdrLen":0,
+        "MaxQueryStringLen":0,
+        "CredentialCharset":"protocol",
+        "HTTP2MaxStreams":100,
+        "HTTP2MaxFrameSize":16384,
+        "HTTP2StreamHeader":"off",
+        "ChunkedEncoding":"on",
+        "HeaderTimeout":30000,
+        "HTTP2IdleTimeout":0
+      }
+    },
+    {
+      "HTTPSourceProtocolHandler":{
+        "@name":"Handler_HTTP2",
+        "mAdminState":"enabled",
+        "LocalAddress":"0.0.0.0",
+        "LocalPort":9001,
+        "HTTPVersion":"HTTP/1.1",
+        "AllowedFeatures":{
+          "HTTP-1.0":"on",
+          "HTTP-1.1":"off",
+          "HTTP-2.0":"off",
+          "POST":"off",
+          "GET":"{{ change_HTTPSourceProtocolHandler_Handler.*_AllowedFeatures.GET }}",
+          "PUT":"on",
+          "PATCH":"on",
+          "HEAD":"off",
+          "OPTIONS":"off",
+          "TRACE":"off",
+          "DELETE":"off",
+          "CONNECT":"off",
+          "CustomMethods":"off",
+          "QueryString":"on",
+          "FragmentIdentifiers":"on",
+          "DotDot":"off",
+          "DotDotInPath":"off",
+          "DotDotInQueryString":"off",
+          "CmdExe":"off"
+        },
+        "PersistentConnections":"on",
+        "MaxPersistentConnectionsReuse":0,
+        "AllowCompression":"off",
+        "AllowWebSocketUpgrade":"off",
+        "WebSocketIdleTimeout":0,
+        "MaxURLLen":16384,
+        "MaxTotalHdrLen":128000,
+        "MaxHdrCount":0,
+        "MaxNameHdrLen":0,
+        "MaxValueHdrLen":0,
+        "MaxQueryStringLen":0,
+        "CredentialCharset":"protocol",
+        "HTTP2MaxStreams":100,
+        "HTTP2MaxFrameSize":16384,
+        "HTTP2StreamHeader":"off",
+        "ChunkedEncoding":"on",
+        "HeaderTimeout":30000,
+        "HTTP2IdleTimeout":0
+      }
+    },
+    {
+      "HTTPSourceProtocolHandler":{
+        "@name":"Handler_HTTP3",
+        "mAdminState":"enabled",
+        "LocalAddress":"0.0.0.0",
+        "LocalPort":9003,
+        "HTTPVersion":"HTTP/1.1",
+        "AllowedFeatures":{
+          "HTTP-1.0":"on",
+          "HTTP-1.1":"on",
+          "HTTP-2.0":"on",
+          "POST":"on",
+          "GET":"{{ change_HTTPSourceProtocolHandler_Handler.*_AllowedFeatures.GET }}",
+          "PUT":"on",
+          "PATCH":"on",
+          "HEAD":"on",
+          "OPTIONS":"on",
+          "TRACE":"on",
+          "DELETE":"on",
+          "CONNECT":"off",
+          "CustomMethods":"on",
+          "QueryString":"on",
+          "FragmentIdentifiers":"on",
+          "DotDot":"on",
+          "DotDotInPath":"off",
+          "DotDotInQueryString":"off",
+          "CmdExe":"on"
         },
         "PersistentConnections":"on",
         "MaxPersistentConnectionsReuse":0,
@@ -775,11 +1110,11 @@
     },
     {
       "MultiProtocolGateway":{
-        "@name":"test",
+        "@name":"test_MPGW",
         "mAdminState":"enabled",
         "Priority":"normal",
         "FrontProtocol":[
-          "HTTP_FSH"
+          "Handler_HTTP1"
         ],
         "XMLManager":"default",
         "SSLClientConfigType":"proxy",
@@ -828,11 +1163,6 @@
         "ProcessHTTPErrors":"on",
         "HTTPClientIPLabel":"X-Client-IP",
         "HTTPLogCorIDLabel":"X-Global-Transaction-ID",
-        "InOrderMode":{
-          "Request":"off",
-          "Backend":"off",
-          "Response":"off"
-        },
         "WSAMode":"sync2sync",
         "WSARequireAAA":"on",
         "WSAStrip":"on",
@@ -877,7 +1207,6 @@
         "AllowCompression":"off",
         "EnableCompressedPayloadPassthrough":"off",
         "AllowCacheControlHeader":"off",
-        "PolicyAttachments":"test",
         "WSMAgentMonitor":"off",
         "WSMAgentMonitorPCM":"all-messages",
         "ProxyHTTPResponse":"off",
@@ -1015,7 +1344,7 @@
         "MonitoredService":[
           {
             "WSGatewayName":null,
-            "MultiProtocolGatewayName":"test"
+            "MultiProtocolGatewayName":"test_MPGW"
           }
         ]
       }
@@ -1078,11 +1407,11 @@
     },
     {
       "HTTPService":{
-        "@name":"Serwer_HTTP",
+        "@name":"Serwer_HTTP_DEV",
         "mAdminState":"enabled",
         "LocalAddress":"0.0.0.0",
         "Priority":"normal",
-        "LocalPort":8081,
+        "LocalPort":"{{ change_HTTPService_Serwer_HTTP_DEV_LocalPort }}",
         "Mode":"normal",
         "BaseDir":"store:///"
       }
