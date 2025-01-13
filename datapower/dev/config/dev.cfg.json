@@ -1,6 +1,6 @@
 {
   "@build":"370456",
-  "@timestamp":"Mon Jan 13 04:57:14 2025",
+  "@timestamp":"Mon Jan 13 05:05:04 2025",
   "configuration":[
     {
       "DomainSettings":{
@@ -1431,7 +1431,7 @@
       "HTTPService":{
         "@name":"Serwer_HTTP_DEV",
         "mAdminState":"enabled",
-        "LocalAddress":"0.0.0.0",
+        "LocalAddress":"{{ change_HTTPService_Serwer_HTTP_DEV_LocalAddress }}",
         "Priority":"normal",
         "LocalPort":"{{ change_HTTPService_Serwer_HTTP.*_LocalPort }}",
         "Mode":"normal",
