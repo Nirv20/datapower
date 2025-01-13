@@ -1321,7 +1321,7 @@
         "mAdminState":"enabled",
         "LocalAddress":"{{ change_HTTPService_Serwer_HTTP_DEV_LocalAddress }}",
         "Priority":"normal",
-        "LocalPort":8090,
+        "LocalPort":"{{ change_HTTPService_Serwer_HTTP.*_LocalPort }}",
         "Mode":"normal",
         "BaseDir":"store:///"
       }
