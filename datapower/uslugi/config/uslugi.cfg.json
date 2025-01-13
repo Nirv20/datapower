@@ -1,6 +1,6 @@
 {
   "@build":"370456",
-  "@timestamp":"Mon Jan 13 08:35:01 2025",
+  "@timestamp":"Mon Jan 13 09:24:29 2025",
   "configuration":[
     {
       "DomainSettings":{
@@ -681,7 +681,7 @@
         "@name":"HTTP_FSH",
         "mAdminState":"enabled",
         "LocalAddress":"0.0.0.0",
-        "LocalPort":10000,
+        "LocalPort":"{{ change_HTTPSourceProtocolHandler_HTTP_FSH_LocalPort }}",
         "HTTPVersion":"HTTP/1.1",
         "AllowedFeatures":{
           "HTTP-1.0":"on",
@@ -785,7 +785,7 @@
         "SSLClientConfigType":"proxy",
         "DefaultParamNamespace":"http://www.datapower.com/param/config",
         "QueryParamNamespace":"http://www.datapower.com/param/query",
-        "BackendUrl":"http://test",
+        "BackendUrl":"{{ change_MultiProtocolGateway_test_BackendUrl }}",
         "PropagateURI":"on",
         "MonitorProcessingPolicy":"terminate-at-first-throttle",
         "RequestAttachments":"strip",

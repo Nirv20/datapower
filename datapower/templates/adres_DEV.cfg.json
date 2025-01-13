@@ -1,0 +1,32 @@
+{
+  "@build":"370456",
+  "@timestamp":"Mon Jan 13 08:52:06 2025",
+  "configuration":[
+    {
+      "GitOpsTemplate":{
+        "@name":"adres_DEV",
+        "mAdminState":"enabled",
+        "Templates":[
+          {
+            "TemplateType":"change",
+            "ClassName":"MultiProtocolGateway",
+            "Name":"test",
+            "Field":"BackendUrl",
+            "Value":"https://dev.sample.com:4433",
+            "ValueInverse":null,
+            "ValueValidate":null
+          },
+          {
+            "TemplateType":"change",
+            "ClassName":"HTTPSourceProtocolHandler",
+            "Name":"HTTP_FSH",
+            "Field":"LocalPort",
+            "Value":"10000",
+            "ValueInverse":null,
+            "ValueValidate":null
+          }
+        ]
+      }
+    }
+  ]
+}
