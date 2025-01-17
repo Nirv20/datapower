@@ -1199,7 +1199,7 @@
         "mAdminState":"enabled",
         "Priority":"normal",
         "FrontProtocol":[
-          "Handler_HTTP1"
+          "Handler_TEST"
         ],
         "XMLManager":"default",
         "SSLClientConfigType":"proxy",
