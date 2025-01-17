@@ -897,7 +897,7 @@
     {
       "MultiProtocolGateway":{
         "@name":"test",
-        "mAdminState":"enabled",
+        "mAdminState":"disabled",
         "Priority":"normal",
         "FrontProtocol":[
           "HTTP_FSH"
