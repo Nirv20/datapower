@@ -1,6 +1,6 @@
 {
   "@build":"370456",
-  "@timestamp":"Fri Jan 17 09:27:31 2025",
+  "@timestamp":"Fri Jan 17 09:33:31 2025",
   "configuration":[
     {
       "GitOpsTemplate":{
@@ -12,7 +12,7 @@
             "ClassName":"HTTPService",
             "Name":"Serwer_HTTP_DEV",
             "Field":"LocalPort",
-            "Value":"8071",
+            "Value":"$(port_DEV)",
             "ValueInverse":null,
             "ValueValidate":null
           },
@@ -25,8 +25,7 @@
             "ValueInverse":null,
             "ValueValidate":null
           }
-        ],
-        "VariableRef":"gitops-variables"
+        ]
       }
     }
   ]
