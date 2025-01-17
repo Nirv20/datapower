@@ -1,6 +1,6 @@
 {
   "@build":"370456",
-  "@timestamp":"Fri Jan 17 12:47:54 2025",
+  "@timestamp":"Fri Jan 17 12:58:45 2025",
   "configuration":[
     {
       "DomainSettings":{
@@ -399,11 +399,66 @@
       }
     },
     {
+      "StylePolicyAction":{
+        "@name":"teasdsad_rule_1_xform_0",
+        "mAdminState":"enabled",
+        "Type":"xform",
+        "Input":"INPUT",
+        "Transform":"local:///pusty_xslt.xsl",
+        "ParseSettingsReference":{
+          "URL":"",
+          "Literal":null,
+          "Default":null
+        },
+        "ParseMetricsResultType":"none",
+        "InputLanguage":"xml",
+        "TransformLanguage":"none",
+        "OutputLanguage":"default",
+        "ActionDebug":"off",
+        "Output":"OUTPUT",
+        "NoTranscodeUtf8":"off",
+        "SSLClientConfigType":"proxy",
+        "OutputType":"default",
+        "Transactional":"off",
+        "SOAPValidation":"body",
+        "SQLSourceType":"static",
+        "JOSESerializationType":"compact",
+        "JWEEncAlgorithm":"A128CBC-HS256",
+        "JOSEVerifyType":"identifiers",
+        "JOSEDecryptType":"identifiers",
+        "JWSVerifyStripSignature":"on",
+        "Asynchronous":"off",
+        "ResultsMode":"first-available",
+        "RetryCount":0,
+        "RetryInterval":1000,
+        "MultipleOutputs":"off",
+        "IteratorType":"XPATH",
+        "Timeout":0,
+        "MethodRewriteType":"GET",
+        "MethodType":"POST",
+        "MethodType2":"POST"
+      }
+    },
+    {
       "StylePolicyRule":{
         "@name":"teasdsad_rule_0",
         "mAdminState":"enabled",
         "Actions":[
           "teasdsad_rule_0_results_output_0"
+        ],
+        "Direction":"rule",
+        "InputFormat":"none",
+        "OutputFormat":"none",
+        "NonXMLProcessing":"off",
+        "Unprocessed":"off"
+      }
+    },
+    {
+      "StylePolicyRule":{
+        "@name":"teasdsad_rule_1",
+        "mAdminState":"enabled",
+        "Actions":[
+          "teasdsad_rule_1_xform_0"
         ],
         "Direction":"rule",
         "InputFormat":"none",
@@ -548,6 +603,10 @@
           {
             "Match":"__default-accept-service-providers__",
             "Rule":"teasdsad_rule_0"
+          },
+          {
+            "Match":"__default-accept-service-providers__",
+            "Rule":"teasdsad_rule_1"
           }
         ]
       }
@@ -838,7 +897,7 @@
     {
       "MultiProtocolGateway":{
         "@name":"test",
-        "mAdminState":"disabled",
+        "mAdminState":"enabled",
         "Priority":"normal",
         "FrontProtocol":[
           "HTTP_FSH"
@@ -883,7 +942,7 @@
         "FrontPersistentTimeout":180,
         "BackPersistentTimeout":180,
         "IncludeResponseTypeEncoding":"off",
-        "PersistentConnections":"on",
+        "PersistentConnections":"off",
         "LoopDetection":"off",
         "DoHostRewriting":"on",
         "DoChunkedUpload":"off",
@@ -932,7 +991,7 @@
         "HTTP2Required":"off",
         "RequestType":"soap",
         "ResponseType":"soap",
-        "FollowRedirects":"on",
+        "FollowRedirects":"off",
         "RewriteLocationHeader":"off",
         "StylePolicy":"teasdsad",
         "Type":"static-backend",
