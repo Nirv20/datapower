@@ -1,6 +1,6 @@
 {
   "@build":"370456",
-  "@timestamp":"Mon Jan 13 09:24:29 2025",
+  "@timestamp":"Fri Jan 17 09:48:47 2025",
   "configuration":[
     {
       "DomainSettings":{
@@ -366,6 +366,53 @@
       }
     },
     {
+      "StylePolicyAction":{
+        "@name":"teasdsad_rule_0_results_output_0",
+        "mAdminState":"enabled",
+        "Type":"results",
+        "Input":"INPUT",
+        "ParseSettingsReference":{
+          "URL":"",
+          "Literal":null,
+          "Default":null
+        },
+        "ParseMetricsResultType":"none",
+        "TransformLanguage":"none",
+        "ActionDebug":"off",
+        "NoTranscodeUtf8":"off",
+        "SSLClientConfigType":"proxy",
+        "OutputType":"default",
+        "Transactional":"off",
+        "SOAPValidation":"body",
+        "SQLSourceType":"static",
+        "JWSVerifyStripSignature":"on",
+        "Asynchronous":"off",
+        "ResultsMode":"first-available",
+        "RetryCount":0,
+        "RetryInterval":1000,
+        "MultipleOutputs":"off",
+        "IteratorType":"XPATH",
+        "Timeout":0,
+        "MethodRewriteType":"GET",
+        "MethodType":"POST",
+        "MethodType2":"POST"
+      }
+    },
+    {
+      "StylePolicyRule":{
+        "@name":"teasdsad_rule_0",
+        "mAdminState":"enabled",
+        "Actions":[
+          "teasdsad_rule_0_results_output_0"
+        ],
+        "Direction":"rule",
+        "InputFormat":"none",
+        "OutputFormat":"none",
+        "NonXMLProcessing":"off",
+        "Unprocessed":"off"
+      }
+    },
+    {
       "APIRule":{
         "@name":"default-api-error-rule",
         "mAdminState":"enabled",
@@ -488,6 +535,21 @@
         "DefStylesheetForSoap":"store:///filter-reject-all.xsl",
         "DefStylesheetForXsl":"store:///identity.xsl",
         "DefXQueryForJSON":"store:///reject-all-json.xq"
+      }
+    },
+    {
+      "StylePolicy":{
+        "@name":"teasdsad",
+        "mAdminState":"enabled",
+        "DefStylesheetForSoap":"store:///filter-reject-all.xsl",
+        "DefStylesheetForXsl":"store:///identity.xsl",
+        "DefXQueryForJSON":"store:///reject-all-json.xq",
+        "PolicyMaps":[
+          {
+            "Match":"__default-accept-service-providers__",
+            "Rule":"teasdsad_rule_0"
+          }
+        ]
       }
     },
     {
@@ -816,7 +878,7 @@
         "DebugHistory":25,
         "FlowControl":"off",
         "SOAPSchemaURL":"store:///schemas/soap-envelope.xsd",
-        "FrontTimeout":120,
+        "FrontTimeout":60,
         "BackTimeout":120,
         "FrontPersistentTimeout":180,
         "BackPersistentTimeout":180,
@@ -872,7 +934,7 @@
         "ResponseType":"soap",
         "FollowRedirects":"on",
         "RewriteLocationHeader":"off",
-        "StylePolicy":"default",
+        "StylePolicy":"teasdsad",
         "Type":"static-backend",
         "AllowCompression":"off",
         "EnableCompressedPayloadPassthrough":"off",
