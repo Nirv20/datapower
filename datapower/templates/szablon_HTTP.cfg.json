@@ -1,0 +1,33 @@
+{
+  "@build":"370456",
+  "@timestamp":"Fri Jan 17 09:27:31 2025",
+  "configuration":[
+    {
+      "GitOpsTemplate":{
+        "@name":"szablon_HTTP",
+        "mAdminState":"enabled",
+        "Templates":[
+          {
+            "TemplateType":"change",
+            "ClassName":"HTTPService",
+            "Name":"Serwer_HTTP_DEV",
+            "Field":"LocalPort",
+            "Value":"8071",
+            "ValueInverse":null,
+            "ValueValidate":null
+          },
+          {
+            "TemplateType":"change",
+            "ClassName":"HTTPSourceProtocolHandler",
+            "Name":"Handler.*",
+            "Field":"AllowedFeatures.GET",
+            "Value":"on",
+            "ValueInverse":null,
+            "ValueValidate":null
+          }
+        ],
+        "VariableRef":"gitops-variables"
+      }
+    }
+  ]
+}
