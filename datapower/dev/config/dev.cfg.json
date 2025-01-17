@@ -1,6 +1,6 @@
 {
   "@build":"370456",
-  "@timestamp":"Fri Jan 17 09:18:12 2025",
+  "@timestamp":"Fri Jan 17 09:20:35 2025",
   "configuration":[
     {
       "DomainSettings":{
@@ -108,13 +108,7 @@
       "SSLClientProfile":{
         "@name":"TLS_klient1",
         "mAdminState":"enabled",
-        "Protocols":{
-          "SSLv3":"on",
-          "TLSv1d0":"on",
-          "TLSv1d1":"on",
-          "TLSv1d2":"off",
-          "TLSv1d3":"off"
-        },
+        "Protocols":"{{ change_SSLClientProfile_.*_Protocols }}",
         "Ciphers":[
           "AES_256_GCM_SHA384",
           "CHACHA20_POLY1305_SHA256",
@@ -176,13 +170,7 @@
       "SSLClientProfile":{
         "@name":"TLS_klient2",
         "mAdminState":"enabled",
-        "Protocols":{
-          "SSLv3":"on",
-          "TLSv1d0":"off",
-          "TLSv1d1":"off",
-          "TLSv1d2":"off",
-          "TLSv1d3":"off"
-        },
+        "Protocols":"{{ change_SSLClientProfile_.*_Protocols }}",
         "Ciphers":[
           "AES_256_GCM_SHA384",
           "CHACHA20_POLY1305_SHA256",
@@ -243,13 +231,7 @@
       "SSLClientProfile":{
         "@name":"TLS_klient3",
         "mAdminState":"enabled",
-        "Protocols":{
-          "SSLv3":"on",
-          "TLSv1d0":"on",
-          "TLSv1d1":"on",
-          "TLSv1d2":"on",
-          "TLSv1d3":"on"
-        },
+        "Protocols":"{{ change_SSLClientProfile_.*_Protocols }}",
         "Ciphers":[
           "AES_256_GCM_SHA384",
           "CHACHA20_POLY1305_SHA256",
