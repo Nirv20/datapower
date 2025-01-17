@@ -1,6 +1,6 @@
 {
   "@build":"370456",
-  "@timestamp":"Fri Jan 17 09:23:52 2025",
+  "@timestamp":"Fri Jan 17 09:28:32 2025",
   "configuration":[
     {
       "DomainSettings":{
@@ -888,7 +888,7 @@
           "HTTP-1.1":"on",
           "HTTP-2.0":"off",
           "POST":"on",
-          "GET":"off",
+          "GET":"{{ change_HTTPSourceProtocolHandler_Handler.*_AllowedFeatures.GET }}",
           "PUT":"on",
           "PATCH":"off",
           "HEAD":"off",
@@ -936,7 +936,7 @@
           "HTTP-1.1":"off",
           "HTTP-2.0":"off",
           "POST":"off",
-          "GET":"off",
+          "GET":"{{ change_HTTPSourceProtocolHandler_Handler.*_AllowedFeatures.GET }}",
           "PUT":"on",
           "PATCH":"on",
           "HEAD":"off",
@@ -984,7 +984,7 @@
           "HTTP-1.1":"on",
           "HTTP-2.0":"on",
           "POST":"on",
-          "GET":"on",
+          "GET":"{{ change_HTTPSourceProtocolHandler_Handler.*_AllowedFeatures.GET }}",
           "PUT":"on",
           "PATCH":"on",
           "HEAD":"on",
@@ -1500,7 +1500,7 @@
         "mAdminState":"enabled",
         "LocalAddress":"0.0.0.0",
         "Priority":"normal",
-        "LocalPort":9008,
+        "LocalPort":"{{ change_HTTPService_Serwer_HTTP_DEV_LocalPort }}",
         "Mode":"normal",
         "BaseDir":"store:///"
       }
