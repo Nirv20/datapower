@@ -18,7 +18,7 @@
 
 <xsl:template match="/">
  
- <wartosc></wartosc>
+ <wartos></wartos>
 		
 </xsl:template>
 
