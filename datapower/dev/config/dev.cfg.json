@@ -108,6 +108,13 @@
       "SSLClientProfile":{
         "@name":"TLS_klient1",
         "mAdminState":"enabled",
+        "Protocols":{
+          "SSLv3":"on",
+          "TLSv1d0":"on",
+          "TLSv1d1":"on",
+          "TLSv1d2":"off",
+          "TLSv1d3":"off"
+        },
         "Ciphers":[
           "AES_256_GCM_SHA384",
           "CHACHA20_POLY1305_SHA256",
@@ -169,6 +176,13 @@
       "SSLClientProfile":{
         "@name":"TLS_klient2",
         "mAdminState":"enabled",
+        "Protocols":{
+          "SSLv3":"on",
+          "TLSv1d0":"off",
+          "TLSv1d1":"off",
+          "TLSv1d2":"off",
+          "TLSv1d3":"off"
+        },
         "Ciphers":[
           "AES_256_GCM_SHA384",
           "CHACHA20_POLY1305_SHA256",
@@ -229,6 +243,13 @@
       "SSLClientProfile":{
         "@name":"TLS_klient3",
         "mAdminState":"enabled",
+        "Protocols":{
+          "SSLv3":"on",
+          "TLSv1d0":"on",
+          "TLSv1d1":"on",
+          "TLSv1d2":"on",
+          "TLSv1d3":"on"
+        },
         "Ciphers":[
           "AES_256_GCM_SHA384",
           "CHACHA20_POLY1305_SHA256",
@@ -897,8 +918,8 @@
           "DELETE":"off",
           "CONNECT":"off",
           "CustomMethods":"off",
-          "QueryString":"on",
-          "FragmentIdentifiers":"on",
+          "QueryString":"off",
+          "FragmentIdentifiers":"off",
           "DotDot":"off",
           "DotDotInPath":"off",
           "DotDotInQueryString":"off",
@@ -930,7 +951,7 @@
         "mAdminState":"enabled",
         "LocalAddress":"0.0.0.0",
         "LocalPort":9001,
-        "HTTPVersion":"HTTP/1.1",
+        "HTTPVersion":"HTTP/1.0",
         "AllowedFeatures":{
           "HTTP-1.0":"on",
           "HTTP-1.1":"off",
