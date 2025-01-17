@@ -1,6 +1,6 @@
 {
   "@build":"370456",
-  "@timestamp":"Mon Jan 13 07:10:04 2025",
+  "@timestamp":"Fri Jan 17 02:48:18 2025",
   "configuration":[
     {
       "DomainSettings":{
@@ -20,9 +20,17 @@
     },
     {
       "PasswordAlias":{
-        "@name":"github_pass",
+        "@name":"github_haslo",
         "mAdminState":"enabled",
         "Version":1,
+        "EncryptedPassword":"l2G6dHq7NA+y0yMwh7m+xyV8utwG1S/4/b3/N3pCk9gWCmf6FsDlVwBiPY8eXsmnwahFYsZK1pCGCmnoKER0lw=="
+      }
+    },
+    {
+      "PasswordAlias":{
+        "@name":"github_pass",
+        "mAdminState":"enabled",
+        "Version":0,
         "EncryptedPassword":"WznqJ2pA5uNJoiSSrJlEVDRf5EgyjCBZSbuYLEAgu3A4H27tWuQwMzvvdc90IiKhsknBPNxX5t/71AgUbfbkjQ=="
       }
     },
@@ -100,6 +108,13 @@
       "SSLClientProfile":{
         "@name":"TLS_klient1",
         "mAdminState":"enabled",
+        "Protocols":{
+          "SSLv3":"on",
+          "TLSv1d0":"on",
+          "TLSv1d1":"on",
+          "TLSv1d2":"off",
+          "TLSv1d3":"off"
+        },
         "Ciphers":[
           "AES_256_GCM_SHA384",
           "CHACHA20_POLY1305_SHA256",
@@ -176,6 +191,13 @@
       "SSLClientProfile":{
         "@name":"TLS_klient2",
         "mAdminState":"enabled",
+        "Protocols":{
+          "SSLv3":"on",
+          "TLSv1d0":"off",
+          "TLSv1d1":"off",
+          "TLSv1d2":"off",
+          "TLSv1d3":"off"
+        },
         "Ciphers":[
           "AES_256_GCM_SHA384",
           "CHACHA20_POLY1305_SHA256",
@@ -252,6 +274,13 @@
       "SSLClientProfile":{
         "@name":"TLS_klient3",
         "mAdminState":"enabled",
+        "Protocols":{
+          "SSLv3":"on",
+          "TLSv1d0":"on",
+          "TLSv1d1":"on",
+          "TLSv1d2":"on",
+          "TLSv1d3":"on"
+        },
         "Ciphers":[
           "AES_256_GCM_SHA384",
           "CHACHA20_POLY1305_SHA256",
@@ -927,7 +956,7 @@
           "HTTP-1.1":"on",
           "HTTP-2.0":"off",
           "POST":"on",
-          "GET":"{{ change_HTTPSourceProtocolHandler_Handler.*_AllowedFeatures.GET }}",
+          "GET":"on",
           "PUT":"on",
           "PATCH":"off",
           "HEAD":"off",
@@ -975,7 +1004,7 @@
           "HTTP-1.1":"off",
           "HTTP-2.0":"off",
           "POST":"off",
-          "GET":"{{ change_HTTPSourceProtocolHandler_Handler.*_AllowedFeatures.GET }}",
+          "GET":"on",
           "PUT":"on",
           "PATCH":"on",
           "HEAD":"off",
@@ -1016,14 +1045,14 @@
         "@name":"Handler_HTTP3",
         "mAdminState":"enabled",
         "LocalAddress":"0.0.0.0",
-        "LocalPort":9003,
+        "LocalPort":9002,
         "HTTPVersion":"HTTP/1.1",
         "AllowedFeatures":{
           "HTTP-1.0":"on",
           "HTTP-1.1":"on",
           "HTTP-2.0":"on",
           "POST":"on",
-          "GET":"{{ change_HTTPSourceProtocolHandler_Handler.*_AllowedFeatures.GET }}",
+          "GET":"on",
           "PUT":"on",
           "PATCH":"on",
           "HEAD":"on",
@@ -1080,6 +1109,25 @@
         "EnablePeerGroup":"off",
         "Priority":100,
         "EnableSSL":"on",
+        "PersistenceLocation":"memory",
+        "LocalDirectory":"local:///",
+        "LogLevel":"internal",
+        "MaxMemory":0,
+        "StatusFileMaxSize":100,
+        "StatusFileMaxRotation":100
+      }
+    },
+    {
+      "GatewayPeering":{
+        "@name":"dev_probe-peering0",
+        "mAdminState":"enabled",
+        "LocalPort":16382,
+        "PrimaryCount":"1",
+        "MonitorPort":26382,
+        "ClusterAutoConfig":"on",
+        "EnablePeerGroup":"off",
+        "Priority":100,
+        "EnableSSL":"off",
         "PersistenceLocation":"memory",
         "LocalDirectory":"local:///",
         "LogLevel":"internal",
@@ -1411,7 +1459,7 @@
         "mAdminState":"enabled",
         "LocalAddress":"0.0.0.0",
         "Priority":"normal",
-        "LocalPort":"{{ change_HTTPService_Serwer_HTTP_DEV_LocalPort }}",
+        "LocalPort":9008,
         "Mode":"normal",
         "BaseDir":"store:///"
       }
