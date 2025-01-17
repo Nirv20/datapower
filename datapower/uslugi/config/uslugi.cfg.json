@@ -1,6 +1,6 @@
 {
   "@build":"370456",
-  "@timestamp":"Fri Jan 17 09:48:47 2025",
+  "@timestamp":"Fri Jan 17 12:51:22 2025",
   "configuration":[
     {
       "DomainSettings":{
@@ -838,7 +838,7 @@
     {
       "MultiProtocolGateway":{
         "@name":"test",
-        "mAdminState":"enabled",
+        "mAdminState":"disabled",
         "Priority":"normal",
         "FrontProtocol":[
           "HTTP_FSH"
@@ -883,7 +883,7 @@
         "FrontPersistentTimeout":180,
         "BackPersistentTimeout":180,
         "IncludeResponseTypeEncoding":"off",
-        "PersistentConnections":"on",
+        "PersistentConnections":"off",
         "LoopDetection":"off",
         "DoHostRewriting":"on",
         "DoChunkedUpload":"off",
@@ -932,7 +932,7 @@
         "HTTP2Required":"off",
         "RequestType":"soap",
         "ResponseType":"soap",
-        "FollowRedirects":"on",
+        "FollowRedirects":"off",
         "RewriteLocationHeader":"off",
         "StylePolicy":"teasdsad",
         "Type":"static-backend",
