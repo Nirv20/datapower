@@ -1,6 +1,6 @@
 {
   "@build":"370456",
-  "@timestamp":"Fri Jan 17 09:48:47 2025",
+  "@timestamp":"Fri Jan 17 12:47:54 2025",
   "configuration":[
     {
       "DomainSettings":{
@@ -838,7 +838,7 @@
     {
       "MultiProtocolGateway":{
         "@name":"test",
-        "mAdminState":"enabled",
+        "mAdminState":"disabled",
         "Priority":"normal",
         "FrontProtocol":[
           "HTTP_FSH"
