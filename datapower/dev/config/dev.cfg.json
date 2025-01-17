@@ -1,6 +1,6 @@
 {
   "@build":"370456",
-  "@timestamp":"Fri Jan 17 02:57:11 2025",
+  "@timestamp":"Fri Jan 17 03:11:52 2025",
   "configuration":[
     {
       "DomainSettings":{
@@ -108,6 +108,13 @@
       "SSLClientProfile":{
         "@name":"TLS_klient1",
         "mAdminState":"enabled",
+        "Protocols":{
+          "SSLv3":"on",
+          "TLSv1d0":"on",
+          "TLSv1d1":"on",
+          "TLSv1d2":"off",
+          "TLSv1d3":"off"
+        },
         "Ciphers":[
           "AES_256_GCM_SHA384",
           "CHACHA20_POLY1305_SHA256",
@@ -169,6 +176,13 @@
       "SSLClientProfile":{
         "@name":"TLS_klient2",
         "mAdminState":"enabled",
+        "Protocols":{
+          "SSLv3":"on",
+          "TLSv1d0":"off",
+          "TLSv1d1":"off",
+          "TLSv1d2":"off",
+          "TLSv1d3":"off"
+        },
         "Ciphers":[
           "AES_256_GCM_SHA384",
           "CHACHA20_POLY1305_SHA256",
@@ -229,6 +243,13 @@
       "SSLClientProfile":{
         "@name":"TLS_klient3",
         "mAdminState":"enabled",
+        "Protocols":{
+          "SSLv3":"on",
+          "TLSv1d0":"on",
+          "TLSv1d1":"on",
+          "TLSv1d2":"on",
+          "TLSv1d3":"on"
+        },
         "Ciphers":[
           "AES_256_GCM_SHA384",
           "CHACHA20_POLY1305_SHA256",
@@ -888,8 +909,8 @@
           "HTTP-1.1":"on",
           "HTTP-2.0":"off",
           "POST":"on",
-          "GET":"on",
-          "PUT":"on",
+          "GET":"off",
+          "PUT":"off",
           "PATCH":"off",
           "HEAD":"off",
           "OPTIONS":"off",
@@ -897,8 +918,8 @@
           "DELETE":"off",
           "CONNECT":"off",
           "CustomMethods":"off",
-          "QueryString":"on",
-          "FragmentIdentifiers":"on",
+          "QueryString":"off",
+          "FragmentIdentifiers":"off",
           "DotDot":"off",
           "DotDotInPath":"off",
           "DotDotInQueryString":"off",
@@ -930,13 +951,13 @@
         "mAdminState":"enabled",
         "LocalAddress":"0.0.0.0",
         "LocalPort":9001,
-        "HTTPVersion":"HTTP/1.1",
+        "HTTPVersion":"HTTP/1.0",
         "AllowedFeatures":{
           "HTTP-1.0":"on",
           "HTTP-1.1":"off",
           "HTTP-2.0":"off",
           "POST":"off",
-          "GET":"on",
+          "GET":"off",
           "PUT":"on",
           "PATCH":"on",
           "HEAD":"off",
@@ -1391,7 +1412,7 @@
         "mAdminState":"enabled",
         "LocalAddress":"0.0.0.0",
         "Priority":"normal",
-        "LocalPort":9008,
+        "LocalPort":8080,
         "Mode":"normal",
         "BaseDir":"store:///"
       }
