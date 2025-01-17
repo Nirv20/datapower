@@ -1,6 +1,6 @@
 {
   "@build":"370456",
-  "@timestamp":"Fri Jan 17 03:32:37 2025",
+  "@timestamp":"Fri Jan 17 03:33:32 2025",
   "configuration":[
     {
       "DomainSettings":{
@@ -909,7 +909,7 @@
           "HTTP-1.1":"on",
           "HTTP-2.0":"off",
           "POST":"on",
-          "GET":"on",
+          "GET":"off",
           "PUT":"on",
           "PATCH":"off",
           "HEAD":"off",
@@ -957,7 +957,7 @@
           "HTTP-1.1":"off",
           "HTTP-2.0":"off",
           "POST":"off",
-          "GET":"on",
+          "GET":"off",
           "PUT":"on",
           "PATCH":"on",
           "HEAD":"off",
