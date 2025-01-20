@@ -1,0 +1,24 @@
+{
+  "@build":"370456",
+  "@timestamp":"Mon Jan 20 06:13:47 2025",
+  "configuration":[
+    {
+      "GitOpsTemplate":{
+        "@name":"test_MPGW_PROD_ON",
+        "mAdminState":"enabled",
+        "Templates":[
+          {
+            "TemplateType":"change",
+            "ClassName":"MultiProtocolGateway",
+            "Name":"test",
+            "Field":"mAdminState",
+            "Value":"enabled",
+            "ValueInverse":null,
+            "ValueValidate":null
+          }
+        ],
+        "VariableRef":"gitops-variables"
+      }
+    }
+  ]
+}
